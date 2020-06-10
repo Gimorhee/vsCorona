@@ -8,4 +8,123 @@
 body {
   font-family: "Dosis", sans-serif;
 }
+
+button {
+  -webkit-transition: 0.4s ease-in-out all;
+  transition: 0.4s ease-in-out all;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #888888;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #0779e4;
+}
+
+button:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: 0.4s ease-in-out all;
+  transition: 0.4s ease-in-out all;
+  display: block;
+}
+
+a:hover {
+  color: #0779e4;
+}
+
+h4 {
+  font-size: 18px;
+  color: #0779e4;
+}
+
+.closeSubNav {
+  left: -250px !important;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5vh;
+  background: #fff;
+  -webkit-box-shadow: 1px 1px 3px #888888;
+          box-shadow: 1px 1px 3px #888888;
+  padding: 0 15px;
+  position: fixed;
+  width: 100%;
+  z-index: 101;
+}
+
+.nav .navLeft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav .navLeft .logo {
+  font-size: 20px;
+}
+
+.subNav {
+  position: absolute;
+  width: 250px;
+  height: 95vh;
+  top: 5vh;
+  padding: 50px 25px;
+  left: 0;
+  z-index: 100;
+  background: #fff;
+  -webkit-box-shadow: 1px 1px 5px #888888;
+          box-shadow: 1px 1px 5px #888888;
+  -webkit-transition: 0.4s ease-in-out all;
+  transition: 0.4s ease-in-out all;
+}
+
+.subNav .dashboard {
+  margin-bottom: 30px;
+  height: 100%;
+  width: 100%;
+}
+
+.subNav .dashboard .selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.subNav .dashboard .selection a {
+  margin: 5px 0;
+}
+
+.main {
+  height: 100vh;
+  background: lightcoral;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
 /*# sourceMappingURL=App.css.map */

@@ -53,6 +53,10 @@ h4 {
   font-weight: 600;
 }
 
+.noSubNav {
+  left: 0 !important;
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -177,7 +181,25 @@ h4 {
   height: 200vh;
   background: lightcoral;
   position: absolute;
-  top: 0;
+  top: 5vh;
+  left: 250px;
   width: 100%;
+  -webkit-transition: 0.4s ease-in-out all;
+  transition: 0.4s ease-in-out all;
+  padding: 500px;
+  z-index: 10;
+}
+
+.world {
+  height: 200vh;
+  background: blue;
+  position: absolute;
+  top: 5vh;
+  left: 250px;
+  width: 100%;
+  -webkit-transition: 0.4s ease-in-out all;
+  transition: 0.4s ease-in-out all;
+  padding: 500px;
+  z-index: 15;
 }
 /*# sourceMappingURL=App.css.map */

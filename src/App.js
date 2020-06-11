@@ -21,8 +21,16 @@ function App() {
         <Nav closeSubNav={closeSubNav} />
         <SubNav showSubNav={subNav} />
         <Switch>
-          <Route exact path="/" component={Main}></Route>
-          <Route exact path="/world" component={World}></Route>
+          <Route
+            path="/"
+            render={(props) => <Main {...props} showSubNav={subNav} />}
+          ></Route>
+          <Route
+            path="/world"
+            render={(props) => <World {...props} showSubNav={subNav} />}
+          ></Route>
+          {/* <Route exact path="/" component={Main}></Route>
+          <Route exact path="/world" component={World}></Route> */}
         </Switch>
       </div>
     </Router>

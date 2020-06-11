@@ -16,7 +16,7 @@ export const Nav = ({ closeSubNav }) => {
       </section>
       <section className="navRight">
         <button className="refresh">
-          <i class="fas fa-sync"></i>
+          <i className="fas fa-sync"></i>
         </button>
         {/* ADD MORE LATER */}
       </section>

@@ -13,7 +13,6 @@ function App() {
 
   const closeSubNav = () => {
     setSubNav(!subNav);
-    console.log("clicked!");
   };
 
   return (

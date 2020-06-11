@@ -6,7 +6,8 @@
 }
 
 body {
-  font-family: "Dosis", sans-serif;
+  font-family: "Jura", sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 
 button {
@@ -32,6 +33,7 @@ a {
   -webkit-transition: 0.4s ease-in-out all;
   transition: 0.4s ease-in-out all;
   display: block;
+  color: #888888;
 }
 
 a:hover {
@@ -39,12 +41,16 @@ a:hover {
 }
 
 h4 {
-  font-size: 18px;
-  color: #0779e4;
+  font-size: 17px;
 }
 
 .closeSubNav {
   left: -250px !important;
+}
+
+.currentPage {
+  color: #0779e4 !important;
+  font-weight: 600;
 }
 
 .nav {
@@ -82,11 +88,13 @@ h4 {
 }
 
 .nav .navLeft .logo {
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #252525;
 }
 
 .subNav {
-  position: absolute;
+  position: fixed;
   width: 250px;
   height: 95vh;
   top: 5vh;
@@ -100,13 +108,19 @@ h4 {
   transition: 0.4s ease-in-out all;
 }
 
-.subNav .dashboard {
+.subNav .dashboard,
+.subNav .relatedInfo {
   margin-bottom: 30px;
-  height: 100%;
   width: 100%;
 }
 
-.subNav .dashboard .selection {
+.subNav .dashboard h4,
+.subNav .relatedInfo h4 {
+  margin-bottom: 15px;
+}
+
+.subNav .dashboard .selection,
+.subNav .relatedInfo .selection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,12 +130,51 @@ h4 {
           flex-direction: column;
 }
 
-.subNav .dashboard .selection a {
-  margin: 5px 0;
+.subNav .dashboard .selection a,
+.subNav .relatedInfo .selection a {
+  margin: 10px 0;
+  color: #888888;
+}
+
+.subNav .dashboard .selection a i,
+.subNav .relatedInfo .selection a i {
+  margin-right: 10px;
+}
+
+.subNav .dashboard .selection a:hover,
+.subNav .relatedInfo .selection a:hover {
+  color: #0779e4;
+}
+
+.subNav .aboutMe {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 75px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #eeeeee;
+  font-size: 15px;
+}
+
+.subNav .aboutMe span {
+  display: block;
 }
 
 .main {
-  height: 100vh;
+  height: 200vh;
   background: lightcoral;
   position: absolute;
   top: 0;

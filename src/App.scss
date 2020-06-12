@@ -11,8 +11,10 @@ body {
 
 // GLOBAL
 $theme-color: #0779e4;
+$darker-theme: #0779e4;
 $base-color: #888888;
 $dark-color: #252525;
+$light-color: rgba(255, 255, 255, 0.5);
 
 button {
   transition: 0.4s ease-in-out all;
@@ -42,8 +44,15 @@ a {
   }
 }
 
+// HEADERS
+h1 {
+  font-size: 50px;
+}
 h4 {
   font-size: 17px;
+}
+p {
+  font-size: 18px;
 }
 // @SUBNAV: CLOSING SUBNAV
 .closeSubNav {
@@ -57,6 +66,7 @@ h4 {
 // @FOR ALL PAGES: EXTENDING WIDTH WHEN NO SUBNAV
 .noSubNav {
   left: 0 !important;
+  width: 100% !important;
 }
 
 // NAV
@@ -64,7 +74,7 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 5vh;
+  height: 50px;
   background: #fff;
   box-shadow: 1px 1px 3px $base-color;
   padding: 0 15px;
@@ -91,8 +101,8 @@ h4 {
 .subNav {
   position: fixed;
   width: 250px;
-  height: 95vh;
-  top: 5vh;
+  height: calc(100vh - 50px);
+  top: 50px;
   padding: 50px 25px;
   left: 0;
   z-index: 100;
@@ -148,25 +158,88 @@ h4 {
 
 // MAIN
 .main {
-  height: 200vh;
-  background: lightcoral;
+  height: auto;
+  background: $theme-color;
   position: absolute;
-  top: 5vh;
+  top: 50px;
   left: 250px;
-  width: 100%;
+  width: calc(100% - 250px);
   transition: 0.4s ease-in-out all;
-  padding: 500px;
-  z-index: 10;
+  padding: 50px;
+
+  .intro {
+    margin-bottom: 35px;
+    width: 100%;
+    h1 {
+      color: #fff;
+    }
+
+    p {
+      color: $light-color;
+      margin-bottom: 10px;
+    }
+
+    span {
+      display: block;
+      color: $light-color;
+      font-size: 18px;
+    }
+  }
+
+  .graphs {
+    background: $theme-color;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+
+    .lineGraph,
+    .barGraph {
+      height: auto;
+      width: 49%;
+      background: #fff;
+      border-radius: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+
+      .header {
+        width: 100%;
+        height: 50px;
+        background: rgba(0, 0, 0, 0.03);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 15px;
+
+        h4 {
+          color: $darker-theme;
+        }
+      }
+
+      .graphContainer {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.korea {
+  height: 100px;
+  background: blue;
+  position: absolute;
+  top: 50px;
+  left: 250px;
+  width: calc(100% - 250px);
+  transition: 0.4s ease-in-out all;
 }
 
 .world {
-  height: 200vh;
-  background: blue;
+  height: 100px;
+  background: green;
   position: absolute;
-  top: 5vh;
+  top: 50px;
   left: 250px;
-  width: 100%;
+  width: calc(100% - 250px);
   transition: 0.4s ease-in-out all;
-  padding: 500px;
-  z-index: 15;
 }

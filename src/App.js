@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Main } from "./components/Main";
+import { Korea } from "./components/Korea";
 import { World } from "./components/World";
 import { Nav } from "./components/Nav";
 import { SubNav } from "./components/SubNav";
@@ -22,15 +23,17 @@ function App() {
         <SubNav showSubNav={subNav} />
         <Switch>
           <Route
-            path="/"
-            render={(props) => <Main {...props} showSubNav={subNav} />}
+            path="/korea"
+            render={(props) => <Korea {...props} showSubNav={subNav} />}
           ></Route>
           <Route
             path="/world"
             render={(props) => <World {...props} showSubNav={subNav} />}
           ></Route>
-          {/* <Route exact path="/" component={Main}></Route>
-          <Route exact path="/world" component={World}></Route> */}
+          <Route
+            path="/"
+            render={(props) => <Main {...props} showSubNav={subNav} />}
+          ></Route>
         </Switch>
       </div>
     </Router>

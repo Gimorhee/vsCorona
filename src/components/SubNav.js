@@ -9,13 +9,13 @@ export const SubNav = ({ showSubNav }) => {
       <section className="dashboard">
         <h4>DASHBOARDS</h4>
         <div className="selection">
-          <Link to="/" class={pathname === "/" && "currentPage"}>
+          <Link to="/" className={pathname === "/" && "currentPage"}>
             <i className="fas fa-wave-square"></i>Canada Dashboard
           </Link>
-          <Link to="/korea" class={pathname === "/korea" && "currentPage"}>
+          <Link to="/korea" className={pathname === "/korea" && "currentPage"}>
             <i className="fas fa-wave-square"></i>Korea Dashboard
           </Link>
-          <Link to="/world" class={pathname === "/world" && "currentPage"}>
+          <Link to="/world" className={pathname === "/world" && "currentPage"}>
             <i className="fas fa-wave-square"></i>World Dashboard
           </Link>
         </div>

@@ -1,28 +1,104 @@
 import React, { Fragment, useState, useEffect } from "react";
 import axios from "axios";
-import { VictoryChart, VictoryLine } from "victory";
+import { Line } from "react-chartjs-2";
+import Moment from "react-moment";
+import "moment-timezone";
 
 export const Main = ({ showSubNav }) => {
   const [canadaData, setCanadaData] = useState({});
-
   const { Active, Confirmed, Deaths, Recovered, Date } = canadaData;
 
-  const getData = () => {
-    let url = "https://api.covid19api.com/total/dayone/country/canada";
-    axios.get(url).then((res) => setCanadaData(res.data[res.data.length - 1]));
+  const [graphData, setGraphData] = useState({
+    lineGraph: {
+      labels: [],
+      datasets: [{}],
+    },
+  });
+  const { lineGraph } = graphData;
+
+  const getCurrentData = async () => {
+    const url = "https://api.covid19api.com/total/dayone/country/canada";
+
+    try {
+      const res = await axios.get(url);
+
+      setCanadaData(res.data[res.data.length - 1]);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
-  const data1 = [
-    { x: 1, y: 2 },
-    { x: 2, y: 3 },
-    { x: 3, y: 5 },
-    { x: 4, y: 4 },
-    { x: 5, y: 7 },
-  ];
+  // CONVERING TIME TO MM/DD FORMAT
+  const getCurrentTimeset = (timeSet) => {
+    let timeperiod = [];
+
+    for (let i = 0; i < timeSet.length; i++) {
+      const month = Number(timeSet[i].split("-")[1]);
+      const day = Number(timeSet[i].split("-")[2].split("T")[0]);
+
+      const months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+
+      const thisMonth = months[month];
+
+      timeperiod.push(thisMonth + " " + day);
+    }
+
+    return timeperiod;
+  };
+
+  const getPastDaysTimeset = async () => {
+    let timeSet = [];
+    let dataSet = [];
+    const url = "https://api.covid19api.com/total/dayone/country/canada";
+
+    try {
+      const res = await axios.get(url);
+
+      for (let i = 5; i > 0; i--) {
+        timeSet.push(res.data[res.data.length - i].Date);
+        dataSet.push(res.data[res.data.length - i].Confirmed);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+
+    await setGraphData({
+      lineGraph: {
+        labels: getCurrentTimeset(timeSet),
+        datasets: [
+          {
+            label: "# of Confirmed",
+            fill: false,
+            lineTension: 0,
+            backgroundColor: "#0779e4",
+            borderColor: "#0779e4",
+            borderWidth: 3,
+            data: dataSet,
+          },
+        ],
+      },
+    });
+    console.log(timeSet);
+  };
 
   useEffect(() => {
-    getData();
-  }, [getData]);
+    getCurrentData();
+    getPastDaysTimeset();
+  }, []);
+
   return (
     <Fragment>
       <div className={showSubNav ? "main" : "main noSubNav"}>
@@ -32,7 +108,15 @@ export const Main = ({ showSubNav }) => {
             vsCorona is built with 'Coronavirus COVID19 API' provided by
             Postman.
           </p>
-          <span>Last Update: {Date}</span>
+          <span>
+            Last Update:{" "}
+            <Moment format="YYYY-MM-DD @HH:mm" add={{ days: 1 }}>
+              {Date}
+            </Moment>
+          </span>
+          <span className="subIntro">
+            * There may be a slight difference in the following data.
+          </span>
         </div>
         <div className="graphs">
           <div className="lineGraph">
@@ -40,15 +124,20 @@ export const Main = ({ showSubNav }) => {
               <h4>Daily National Corona Update</h4>
             </div>
             <div className="graphContainer">
-              <VictoryChart>
-                <VictoryLine
-                  style={{
-                    data: { stroke: "#c43a31" },
-                    parent: { border: "1px solid #ccc" },
-                  }}
-                  data={data1}
-                />
-              </VictoryChart>
+              <Line
+                data={lineGraph}
+                options={{
+                  title: {
+                    display: false,
+                    text: "Any Title",
+                    fontSize: 20,
+                  },
+                  legend: {
+                    display: true,
+                    position: "bottom",
+                  },
+                }}
+              />
             </div>
           </div>
 

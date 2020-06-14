@@ -4,51 +4,21 @@ import Moment from "react-moment";
 import "moment-timezone";
 
 import { NationalLineChart } from "./graph/NationalLineChart";
-import { NationalPieChart } from "./graph/NationalPieChart";
+import { NationalBarChart } from "./graph/NationalBarChart";
 
 export const Main = ({ showSubNav }) => {
   const [canadaData, setCanadaData] = useState({});
   const { Active, Confirmed, Deaths, Recovered, Date } = canadaData;
 
-  const [graphData, setGraphData] = useState({
-    lineGraph: {
-      labels: [],
-      datasets: [{}],
-    },
-    pieGraph: {
-      labels: [
-        "Alberta",
-        "British Columbia",
-        "Saskatchewan",
-        "Maintoba",
-        "Ontario",
-        "Quebec",
-      ],
-      datasets: [
-        {
-          label: "Rainfall",
-          backgroundColor: [
-            "#63b7af",
-            "#0779e4",
-            "#f5c3bc",
-            "#ede59a",
-            "#ee4540",
-            "#a278b5",
-          ],
-          hoverBackgroundColor: [
-            "#347474",
-            "#3282b8",
-            "#e89da2",
-            "#d5c455",
-            "#801336",
-            "#f6c3e5",
-          ],
-          data: [650, 59, 80, 81, 56, 70],
-        },
-      ],
-    },
+  const [lineGraph, setLineGraph] = useState({
+    labels: [],
+    datasets: [{}],
   });
-  const { lineGraph, pieGraph } = graphData;
+
+  const [barGraph, setBarGraph] = useState({
+    labels: [],
+    datasets: [{}],
+  });
 
   // GETTING CURRENT DATA
   const getCurrentData = async () => {
@@ -111,22 +81,20 @@ export const Main = ({ showSubNav }) => {
       console.log(error);
     }
 
-    await setGraphData({
-      ...graphData,
-      lineGraph: {
-        labels: getCurrentTimeset(timeSet),
-        datasets: [
-          {
-            label: "Total Confirmed #",
-            fill: false,
-            lineTension: 0,
-            backgroundColor: "#0779e4",
-            borderColor: "#0779e4",
-            borderWidth: 4,
-            data: dataSet,
-          },
-        ],
-      },
+    await setLineGraph({
+      ...lineGraph,
+      labels: getCurrentTimeset(timeSet),
+      datasets: [
+        {
+          label: "Total Confirmed #",
+          fill: false,
+          lineTension: 0,
+          backgroundColor: "#0779e4",
+          borderColor: "rgba(0,0,0,1)",
+          borderWidth: 2,
+          data: dataSet,
+        },
+      ],
     });
   };
 
@@ -138,6 +106,7 @@ export const Main = ({ showSubNav }) => {
 
       const res = await axios.get(url);
       const numOfProvince = 13;
+      let provinceData = [];
 
       for (let i = 1; i <= numOfProvince; i++) {
         const provinceName = res.data[res.data.length - i].Province;
@@ -145,33 +114,68 @@ export const Main = ({ showSubNav }) => {
 
         switch (provinceName) {
           case "Alberta":
-            pieGraph.datasets[0].data[0] = confirmedNumber;
+            provinceData[0] = confirmedNumber;
             break;
 
           case "British Columbia":
-            pieGraph.datasets[0].data[1] = confirmedNumber;
+            provinceData[1] = confirmedNumber;
             break;
 
           case "Saskatchewan":
-            pieGraph.datasets[0].data[2] = confirmedNumber;
+            provinceData[2] = confirmedNumber;
             break;
 
           case "Manitoba":
-            pieGraph.datasets[0].data[3] = confirmedNumber;
+            provinceData[3] = confirmedNumber;
             break;
 
           case "Ontario":
-            pieGraph.datasets[0].data[4] = confirmedNumber;
+            provinceData[4] = confirmedNumber;
             break;
 
           case "Quebec":
-            pieGraph.datasets[0].data[5] = confirmedNumber;
+            provinceData[5] = confirmedNumber;
             break;
           default:
-            console.log("Something went wrong!");
+            console.log("etc province");
             break;
         }
       }
+
+      setBarGraph({
+        ...barGraph,
+        labels: [
+          "Alberta",
+          "British Columbia",
+          "Saskatchewan",
+          "Maintoba",
+          "Ontario",
+          "Quebec",
+        ],
+        datasets: [
+          {
+            backgroundColor: [
+              "#63b7af",
+              "#ee4540",
+              "#f5c3bc",
+              "#ede59a",
+              "#0779e4",
+              "#a278b5",
+            ],
+            borderColor: "rgba(0,0,0,1)",
+            borderWidth: 3,
+            hoverBackgroundColor: [
+              "#347474",
+              "#801336",
+              "#e89da2",
+              "#d5c455",
+              "#3282b8",
+              "#f6c3e5",
+            ],
+            data: provinceData,
+          },
+        ],
+      });
     } catch (err) {
       console.log(err);
     }
@@ -205,7 +209,7 @@ export const Main = ({ showSubNav }) => {
         <div className="graphs">
           <div className="lineGraph">
             <div className="header">
-              <h4>Daily National Confirmed # Update</h4>
+              <h4>National Daily Confirmed Chart</h4>
             </div>
             <div className="graphContainer">
               <NationalLineChart lineGraph={lineGraph} />
@@ -214,10 +218,10 @@ export const Main = ({ showSubNav }) => {
 
           <div className="barGraph">
             <div className="header">
-              <h4>Provicial Confirmed # Update</h4>
+              <h4>Provicial Confirmed Chart</h4>
             </div>
             <div className="graphContainer">
-              <NationalPieChart pieGraph={pieGraph} />
+              <NationalBarChart barGraph={barGraph} />
             </div>
           </div>
         </div>

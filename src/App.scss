@@ -227,31 +227,27 @@ p {
       .graphContainer {
         width: 100%;
         padding: 30px 15px;
-
-        .graph {
-          padding: 15px;
-        }
       }
     }
   }
-}
 
-.korea {
-  height: 100px;
-  background: blue;
-  position: absolute;
-  top: 50px;
-  left: 250px;
-  width: calc(100% - 250px);
-  transition: 0.4s ease-in-out all;
-}
+  .korea {
+    height: 100px;
+    background: blue;
+    position: absolute;
+    top: 50px;
+    left: 250px;
+    width: calc(100% - 250px);
+    transition: 0.4s ease-in-out all;
+  }
 
-.world {
-  height: 100px;
-  background: green;
-  position: absolute;
-  top: 50px;
-  left: 250px;
-  width: calc(100% - 250px);
-  transition: 0.4s ease-in-out all;
+  .world {
+    height: 100px;
+    background: green;
+    position: absolute;
+    top: 50px;
+    left: 250px;
+    width: calc(100% - 250px);
+    transition: 0.4s ease-in-out all;
+  }
 }

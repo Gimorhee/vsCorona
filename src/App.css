@@ -282,12 +282,7 @@ p {
   padding: 30px 15px;
 }
 
-.main .graphs .lineGraph .graphContainer .graph,
-.main .graphs .barGraph .graphContainer .graph {
-  padding: 15px;
-}
-
-.korea {
+.main .korea {
   height: 100px;
   background: blue;
   position: absolute;
@@ -298,7 +293,7 @@ p {
   transition: 0.4s ease-in-out all;
 }
 
-.world {
+.main .world {
   height: 100px;
   background: green;
   position: absolute;

@@ -1,8 +1,9 @@
 import React, { Fragment, useState, useEffect } from "react";
 import axios from "axios";
-import { Line } from "react-chartjs-2";
 import Moment from "react-moment";
 import "moment-timezone";
+
+import { NationalLineChart } from "./graph/NationalLineChart";
 
 export const Main = ({ showSubNav }) => {
   const [canadaData, setCanadaData] = useState({});
@@ -16,6 +17,7 @@ export const Main = ({ showSubNav }) => {
   });
   const { lineGraph } = graphData;
 
+  // GETTING CURRENT DATA
   const getCurrentData = async () => {
     const url = "https://api.covid19api.com/total/dayone/country/canada";
 
@@ -28,7 +30,7 @@ export const Main = ({ showSubNav }) => {
     }
   };
 
-  // CONVERING TIME TO MM/DD FORMAT
+  // CREATING TIME ARRAY WITH MM/DD FORMAT
   const getCurrentTimeset = (timeSet) => {
     let timeperiod = [];
 
@@ -59,6 +61,7 @@ export const Main = ({ showSubNav }) => {
     return timeperiod;
   };
 
+  // GETTING LAST 5 DAYS DATA FOR GRAPH
   const getPastDaysTimeset = async () => {
     let timeSet = [];
     let dataSet = [];
@@ -85,13 +88,12 @@ export const Main = ({ showSubNav }) => {
             lineTension: 0,
             backgroundColor: "#0779e4",
             borderColor: "#0779e4",
-            borderWidth: 3,
+            borderWidth: 4,
             data: dataSet,
           },
         ],
       },
     });
-    console.log(timeSet);
   };
 
   useEffect(() => {
@@ -124,20 +126,7 @@ export const Main = ({ showSubNav }) => {
               <h4>Daily National Corona Update</h4>
             </div>
             <div className="graphContainer">
-              <Line
-                data={lineGraph}
-                options={{
-                  title: {
-                    display: false,
-                    text: "Any Title",
-                    fontSize: 20,
-                  },
-                  legend: {
-                    display: true,
-                    position: "bottom",
-                  },
-                }}
-              />
+              <NationalLineChart lineGraph={lineGraph} />
             </div>
           </div>
 

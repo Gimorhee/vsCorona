@@ -1,14 +1,14 @@
 import React from "react";
-import { Line } from "react-chartjs-2";
+import { Pie } from "react-chartjs-2";
 
-export const NationalLineChart = ({ lineGraph }) => {
+export const NationalPieChart = ({ pieGraph }) => {
   return (
-    <Line
-      data={lineGraph}
+    <Pie
+      data={pieGraph}
       options={{
         title: {
           display: false,
-          text: "Any Title",
+          text: "Average Rainfall per month",
           fontSize: 20,
         },
         legend: {

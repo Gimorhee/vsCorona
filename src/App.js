@@ -46,8 +46,8 @@ function App() {
             render={(props) => <Main {...props} showSubNav={subNav} />}
           ></Route>
         </Switch>
-        {subNav && <div className="darkBg"></div>}
       </div>
+      {subNav && <div className="darkBg"></div>}
     </Router>
   );
 }

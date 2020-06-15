@@ -188,19 +188,21 @@ p {
 
 .main {
   height: auto;
-  background: #0779e4;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0028ff), to(#fff));
+  background: linear-gradient(to bottom, #0028ff, #fff);
   position: absolute;
   top: 50px;
   left: 250px;
   width: calc(100% - 250px);
   -webkit-transition: 0.4s ease-in-out all;
   transition: 0.4s ease-in-out all;
-  padding: 50px 25px;
+  padding: 40px 25px;
 }
 
 .main .intro {
   margin-bottom: 35px;
   width: 100%;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .main .intro h1 {
@@ -225,7 +227,6 @@ p {
 }
 
 .main .graphs {
-  background: #0779e4;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -240,9 +241,9 @@ p {
 .main .graphs .lineGraph,
 .main .graphs .barGraph {
   height: auto;
-  width: 49%;
+  width: 49.3%;
   background: #fff;
-  border-radius: 15px;
+  border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -252,6 +253,8 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .main .graphs .lineGraph .header,
@@ -282,7 +285,119 @@ p {
   padding: 15px;
 }
 
-.main .korea {
+.main .status {
+  margin-top: 35px;
+  width: 100%;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .status span {
+  display: block;
+}
+
+.main .status .singleStatus {
+  width: 24%;
+  color: #fff;
+  border-radius: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.main .status .singleStatus .header {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.main .status .singleStatus .data {
+  font-size: 40px;
+  padding: 20px;
+}
+
+.main .status .singleStatus .link {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .status .singleStatus .link a {
+  color: #fff;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .status .singleStatus .link a i {
+  -webkit-transition: 0.3s ease-in-out all;
+  transition: 0.3s ease-in-out all;
+}
+
+.main .status .singleStatus .link a:hover {
+  text-decoration: underline;
+}
+
+.main .status .singleStatus .link a:hover i {
+  -webkit-transform: translateX(7px);
+          transform: translateX(7px);
+}
+
+.main .status .active {
+  background: #1eb2a6;
+}
+
+.main .status .active .link {
+  background: #21a398;
+}
+
+.main .status .confirmed {
+  background: #e09d3f;
+}
+
+.main .status .confirmed .link {
+  background: #c48630;
+}
+
+.main .status .recovered {
+  background: #07a35f;
+}
+
+.main .status .recovered .link {
+  background: #038a4f;
+}
+
+.main .status .deaths {
+  background: #ff5733;
+}
+
+.main .status .deaths .link {
+  background: #d43a18;
+}
+
+.korea {
   height: 100px;
   background: blue;
   position: absolute;
@@ -293,7 +408,7 @@ p {
   transition: 0.4s ease-in-out all;
 }
 
-.main .world {
+.world {
   height: 100px;
   background: green;
   position: absolute;
@@ -302,6 +417,13 @@ p {
   width: calc(100% - 250px);
   -webkit-transition: 0.4s ease-in-out all;
   transition: 0.4s ease-in-out all;
+}
+
+@media only screen and (max-width: 1200px) {
+  .main .status .singleStatus {
+    width: 49%;
+    margin-bottom: 15px;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -337,6 +459,15 @@ p {
   .main .graphs .barGraph {
     width: 100%;
     margin-bottom: 20px;
+  }
+  .main .status {
+    margin-top: 0px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main .status .singleStatus {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=App.css.map */

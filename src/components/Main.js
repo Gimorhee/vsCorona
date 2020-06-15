@@ -64,6 +64,11 @@ export const Main = ({ showSubNav }) => {
     return timeperiod;
   };
 
+  // THOUSAND SEPARATOR
+  const printNumberwithCommas = (number) => {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
+
   // GETTING LAST 5 DAYS DATA FOR LINE GRAPH
   const getPastDaysTimeset = async () => {
     let timeSet = [];
@@ -190,7 +195,7 @@ export const Main = ({ showSubNav }) => {
   return (
     <Fragment>
       <div className={showSubNav ? "main" : "main noSubNav"}>
-        <div className="intro">
+        <section className="intro">
           <h1>National Dashboard</h1>
           <p>vsCorona is built with 'COVID19 API' by Postman.</p>
           <span>
@@ -202,8 +207,8 @@ export const Main = ({ showSubNav }) => {
           <span className="subIntro">
             * There may be a slight difference in the following data.
           </span>
-        </div>
-        <div className="graphs">
+        </section>
+        <section className="graphs">
           <div className="lineGraph">
             <div className="header">
               <h4>National Daily Confirmed Chart</h4>
@@ -221,7 +226,53 @@ export const Main = ({ showSubNav }) => {
               <NationalBarChart barGraph={barGraph} />
             </div>
           </div>
-        </div>
+        </section>
+        <section className="status">
+          <div className="active singleStatus">
+            <span className="header">Active</span>
+            <span className="data">
+              {printNumberwithCommas(Number(Active))}
+            </span>
+            <span class="link">
+              <a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">
+                Live Dashboard by CSSE <i className="fas fa-angle-right"></i>
+              </a>
+            </span>
+          </div>
+          <div className="confirmed singleStatus">
+            <span className="header">Confirmed</span>
+            <span className="data">
+              {printNumberwithCommas(Number(Confirmed))}
+            </span>
+            <span class="link">
+              <a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">
+                Live Dashboard by CSSE <i className="fas fa-angle-right"></i>
+              </a>
+            </span>
+          </div>
+          <div className="recovered singleStatus">
+            <span className="header">Recovered</span>
+            <span className="data">
+              {printNumberwithCommas(Number(Recovered))}
+            </span>
+            <span class="link">
+              <a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">
+                Live Dashboard by CSSE <i className="fas fa-angle-right"></i>
+              </a>
+            </span>
+          </div>
+          <div className="deaths singleStatus">
+            <span className="header">Deaths</span>
+            <span className="data">
+              {printNumberwithCommas(Number(Deaths))}
+            </span>
+            <span class="link">
+              <a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">
+                Live Dashboard by CSSE <i className="fas fa-angle-right"></i>
+              </a>
+            </span>
+          </div>
+        </section>
       </div>
     </Fragment>
   );

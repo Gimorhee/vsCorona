@@ -3,6 +3,7 @@ import axios from "axios";
 
 import { Intro } from "./Intro/Intro";
 import { Graph } from "./Graph/Graph";
+import { Status } from "./Status/Status";
 
 export const Main = ({ showSubNav }) => {
   const [canadaData, setCanadaData] = useState({});
@@ -21,11 +22,6 @@ export const Main = ({ showSubNav }) => {
     }
   };
 
-  // THOUSAND SEPARATOR
-  const printNumberwithCommas = (number) => {
-    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  };
-
   useEffect(() => {
     getCurrentData();
   }, []);
@@ -35,52 +31,7 @@ export const Main = ({ showSubNav }) => {
       <div className={showSubNav ? "main" : "main noSubNav"}>
         <Intro region={"National"} Date={Date} />
         <Graph region={"National"} country={"canada"} />
-        <section className="status">
-          <div className="active singleStatus">
-            <span className="header">Active</span>
-            <span className="data">
-              {printNumberwithCommas(Number(Active))}
-            </span>
-            <span class="link">
-              <a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">
-                Live Dashboard by CSSE <i className="fas fa-angle-right"></i>
-              </a>
-            </span>
-          </div>
-          <div className="confirmed singleStatus">
-            <span className="header">Confirmed</span>
-            <span className="data">
-              {printNumberwithCommas(Number(Confirmed))}
-            </span>
-            <span class="link">
-              <a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">
-                Live Dashboard by CSSE <i className="fas fa-angle-right"></i>
-              </a>
-            </span>
-          </div>
-          <div className="recovered singleStatus">
-            <span className="header">Recovered</span>
-            <span className="data">
-              {printNumberwithCommas(Number(Recovered))}
-            </span>
-            <span class="link">
-              <a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">
-                Live Dashboard by CSSE <i className="fas fa-angle-right"></i>
-              </a>
-            </span>
-          </div>
-          <div className="deaths singleStatus">
-            <span className="header">Deaths</span>
-            <span className="data">
-              {printNumberwithCommas(Number(Deaths))}
-            </span>
-            <span class="link">
-              <a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">
-                Live Dashboard by CSSE <i className="fas fa-angle-right"></i>
-              </a>
-            </span>
-          </div>
-        </section>
+        <Status statusData={canadaData} />
       </div>
     </Fragment>
   );

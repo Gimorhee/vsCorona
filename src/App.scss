@@ -14,7 +14,6 @@ $theme-color: #0779e4;
 $darker-theme: #0779e4;
 $base-color: #888888;
 $dark-color: #252525;
-$light-color: rgba(255, 255, 255, 0.5);
 
 button {
   transition: 0.4s ease-in-out all;
@@ -176,13 +175,13 @@ p {
     }
 
     p {
-      color: $light-color;
+      color: #fff;
       margin-bottom: 10px;
     }
 
     span {
       display: block;
-      color: $light-color;
+      color: #fff;
       font-size: 18px;
     }
 
@@ -283,7 +282,6 @@ p {
           }
 
           &:hover {
-            text-decoration: underline;
             i {
               transform: translateX(7px);
             }
@@ -293,34 +291,34 @@ p {
     }
 
     .active {
-      background: #1eb2a6;
+      background: #00cfd5;
 
       .link {
-        background: #21a398;
+        background: #06b8be;
       }
     }
 
     .confirmed {
-      background: #e09d3f;
+      background: #fe9801;
 
       .link {
-        background: #c48630;
+        background: #cf8310;
       }
     }
 
     .recovered {
-      background: #07a35f;
+      background: #00ac69;
 
       .link {
-        background: #038a4f;
+        background: #049c62;
       }
     }
 
     .deaths {
-      background: #ff5733;
+      background: #ff0000;
 
       .link {
-        background: #d43a18;
+        background: #b81919;
       }
     }
   }

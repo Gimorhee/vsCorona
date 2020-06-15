@@ -210,13 +210,13 @@ p {
 }
 
 .main .intro p {
-  color: rgba(255, 255, 255, 0.5);
+  color: #fff;
   margin-bottom: 10px;
 }
 
 .main .intro span {
   display: block;
-  color: rgba(255, 255, 255, 0.5);
+  color: #fff;
   font-size: 18px;
 }
 
@@ -356,45 +356,41 @@ p {
   transition: 0.3s ease-in-out all;
 }
 
-.main .status .singleStatus .link a:hover {
-  text-decoration: underline;
-}
-
 .main .status .singleStatus .link a:hover i {
   -webkit-transform: translateX(7px);
           transform: translateX(7px);
 }
 
 .main .status .active {
-  background: #1eb2a6;
+  background: #00cfd5;
 }
 
 .main .status .active .link {
-  background: #21a398;
+  background: #06b8be;
 }
 
 .main .status .confirmed {
-  background: #e09d3f;
+  background: #fe9801;
 }
 
 .main .status .confirmed .link {
-  background: #c48630;
+  background: #cf8310;
 }
 
 .main .status .recovered {
-  background: #07a35f;
+  background: #00ac69;
 }
 
 .main .status .recovered .link {
-  background: #038a4f;
+  background: #049c62;
 }
 
 .main .status .deaths {
-  background: #ff5733;
+  background: #ff0000;
 }
 
 .main .status .deaths .link {
-  background: #d43a18;
+  background: #b81919;
 }
 
 .korea {

@@ -12,7 +12,7 @@ export const NationalLineChart = ({ lineGraph }) => {
           fontSize: 20,
         },
         legend: {
-          display: true,
+          display: false,
           position: "bottom",
         },
       }}

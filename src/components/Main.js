@@ -3,6 +3,7 @@ import axios from "axios";
 import Moment from "react-moment";
 import "moment-timezone";
 
+import { Intro } from "./Intro.js/Intro";
 import { NationalLineChart } from "./graph/NationalLineChart";
 import { NationalBarChart } from "./graph/NationalBarChart";
 
@@ -118,29 +119,30 @@ export const Main = ({ showSubNav }) => {
         const confirmedNumber = res.data[res.data.length - i].Cases;
 
         switch (provinceName) {
-          case "Alberta":
+          case "Quebec":
             provinceData[0] = confirmedNumber;
             break;
 
-          case "British Columbia":
+          case "Ontario":
             provinceData[1] = confirmedNumber;
             break;
 
-          case "Saskatchewan":
+          case "Alberta":
             provinceData[2] = confirmedNumber;
             break;
 
-          case "Manitoba":
+          case "British Columbia":
             provinceData[3] = confirmedNumber;
             break;
 
-          case "Ontario":
+          case "Saskatchewan":
             provinceData[4] = confirmedNumber;
             break;
 
-          case "Quebec":
+          case "Manitoba":
             provinceData[5] = confirmedNumber;
             break;
+
           default:
             console.log("etc province");
             break;
@@ -150,33 +152,19 @@ export const Main = ({ showSubNav }) => {
       setBarGraph({
         ...barGraph,
         labels: [
+          "Quebec",
+          "Ontario",
           "Alberta",
           "British Columbia",
           "Saskatchewan",
           "Maintoba",
-          "Ontario",
-          "Quebec",
         ],
         datasets: [
           {
-            backgroundColor: [
-              "#63b7af",
-              "#ee4540",
-              "#f5c3bc",
-              "#ede59a",
-              "#0779e4",
-              "#a278b5",
-            ],
+            backgroundColor: "#0779e4",
             borderColor: "rgba(0,0,0,1)",
             borderWidth: 3,
-            hoverBackgroundColor: [
-              "#347474",
-              "#801336",
-              "#e89da2",
-              "#d5c455",
-              "#3282b8",
-              "#f6c3e5",
-            ],
+            hoverBackgroundColor: "#3282b8",
             data: provinceData,
           },
         ],
@@ -195,19 +183,7 @@ export const Main = ({ showSubNav }) => {
   return (
     <Fragment>
       <div className={showSubNav ? "main" : "main noSubNav"}>
-        <section className="intro">
-          <h1>National Dashboard</h1>
-          <p>vsCorona is built with 'COVID19 API' by Postman.</p>
-          <span>
-            Last Update:{" "}
-            <Moment format="YYYY-MM-DD" add={{ days: 1 }}>
-              {Date}
-            </Moment>
-          </span>
-          <span className="subIntro">
-            * There may be a slight difference in the following data.
-          </span>
-        </section>
+        <Intro region={"National"} Date={Date} />
         <section className="graphs">
           <div className="lineGraph">
             <div className="header">

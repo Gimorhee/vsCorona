@@ -41,11 +41,11 @@ a:hover {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 45px;
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 17px;
 }
 
 p {
@@ -195,7 +195,7 @@ p {
   width: calc(100% - 250px);
   -webkit-transition: 0.4s ease-in-out all;
   transition: 0.4s ease-in-out all;
-  padding: 50px;
+  padding: 50px 25px;
 }
 
 .main .intro {
@@ -279,7 +279,7 @@ p {
 .main .graphs .lineGraph .graphContainer,
 .main .graphs .barGraph .graphContainer {
   width: 100%;
-  padding: 30px 15px;
+  padding: 15px;
 }
 
 .main .korea {
@@ -313,7 +313,30 @@ p {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .main {
+    padding: 40px 15px;
+  }
+  .main .intro h1 {
+    font-size: 38px;
+  }
+  .main .intro p {
+    font-size: 15px;
+  }
+  .main .intro span {
+    font-size: 15px;
+  }
+  .main .intro .subIntro {
+    font-size: 13px;
+  }
+  .main .graphs .lineGraph,
+  .main .graphs .barGraph {
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
 /*# sourceMappingURL=App.css.map */

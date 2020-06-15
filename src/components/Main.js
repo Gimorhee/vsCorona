@@ -192,13 +192,10 @@ export const Main = ({ showSubNav }) => {
       <div className={showSubNav ? "main" : "main noSubNav"}>
         <div className="intro">
           <h1>National Dashboard</h1>
-          <p>
-            vsCorona is built with 'Coronavirus COVID19 API' provided by
-            Postman.
-          </p>
+          <p>vsCorona is built with 'COVID19 API' by Postman.</p>
           <span>
             Last Update:{" "}
-            <Moment format="YYYY-MM-DD @HH:mm" add={{ days: 1 }}>
+            <Moment format="YYYY-MM-DD" add={{ days: 1 }}>
               {Date}
             </Moment>
           </span>
@@ -218,7 +215,7 @@ export const Main = ({ showSubNav }) => {
 
           <div className="barGraph">
             <div className="header">
-              <h4>Provicial Confirmed Chart</h4>
+              <h4>Provicial Total Confirmed Chart</h4>
             </div>
             <div className="graphContainer">
               <NationalBarChart barGraph={barGraph} />

@@ -6,7 +6,7 @@ export const Nav = ({ closeSubNav }) => {
     <div className="nav">
       <section className="navLeft">
         <button className="toSubNav">
-          <i className="fas fa-bars" onClick={closeSubNav}></i>
+          <i className="fas fa-bars" onClick={() => closeSubNav()}></i>
         </button>
         <div>
           <Link to="/" className="logo">
@@ -15,7 +15,7 @@ export const Nav = ({ closeSubNav }) => {
         </div>
       </section>
       <section className="navRight">
-        <button className="refresh">
+        <button type="button" className="refresh">
           <i className="fas fa-sync"></i>
         </button>
         {/* ADD MORE LATER */}

@@ -4,10 +4,11 @@ import axios from "axios";
 import { Intro } from "./Intro/Intro";
 import { Graph } from "./Graph/Graph";
 import { Status } from "./Status/Status";
+import { Table } from "./Table/Table";
 
 export const Main = ({ showSubNav }) => {
   const [canadaData, setCanadaData] = useState({});
-  const { Active, Confirmed, Deaths, Recovered, Date } = canadaData;
+  const { Date } = canadaData;
 
   // GETTING CURRENT DATA
   const getCurrentData = async () => {
@@ -32,6 +33,7 @@ export const Main = ({ showSubNav }) => {
         <Intro region={"National"} Date={Date} />
         <Graph region={"National"} country={"canada"} />
         <Status statusData={canadaData} />
+        <Table country={"canada"} />
       </div>
     </Fragment>
   );

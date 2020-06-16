@@ -44,6 +44,10 @@ h1 {
   font-size: 45px;
 }
 
+h2 {
+  font-size: 30px;
+}
+
 h4 {
   font-size: 17px;
 }
@@ -391,6 +395,45 @@ p {
 
 .main .status .deaths .link {
   background: #b81919;
+}
+
+.main .table {
+  background: #fff;
+  margin-top: 35px;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.main .table .intro .header {
+  width: 100%;
+  height: 65px;
+  background: rgba(0, 0, 0, 0.03);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  color: #0779e4;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.main .table .intro p {
+  padding: 15px;
+  max-width: 850px;
+  line-height: 1.5;
+  color: #252525;
+  font-weight: 400;
+}
+
+.main .table .intro p b {
+  color: #0779e4;
 }
 
 .korea {

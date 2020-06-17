@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect, useEffect } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import { Main } from "./components/Main";
 import { Korea } from "./components/Korea";
 import { World } from "./components/World";
@@ -47,7 +47,6 @@ function App() {
           ></Route>
         </Switch>
       </div>
-      {subNav && <div className="darkBg"></div>}
     </Router>
   );
 }

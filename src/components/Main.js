@@ -34,6 +34,7 @@ export const Main = ({ showSubNav }) => {
         <Graph region={"National"} country={"canada"} />
         <Status statusData={canadaData} />
         <Table country={"canada"} />
+        {showSubNav && <div className="darkBg"></div>}
       </div>
     </Fragment>
   );

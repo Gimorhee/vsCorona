@@ -55,9 +55,9 @@ export const Table = ({ country }) => {
             <h2>National Statistics Timeline</h2>
           </div>
           <p>
-            Only 2 weeks worth of data are collected for the convinience. Please
-            request if you wish to see the past statistics. * Note that the +
-            numbers indicate the <b>day-over-day</b> increment.
+            Only 2 weeks worth of data are provided for the convinience. Feel
+            free to request me if you wish to see the past statistics. Please
+            note that the +/- numbers indicate the <b>day-over-day</b> changes.
           </p>
         </div>
         <div className="tableContainer">
@@ -71,9 +71,9 @@ export const Table = ({ country }) => {
             </tr>
 
             {twoWeeksData &&
-              twoWeeksData.map((data) => {
+              twoWeeksData.map((data, index) => {
                 return (
-                  <tr>
+                  <tr key={index}>
                     <td>
                       <Moment format="MM-DD" add={{ days: 1 }}>
                         {data.Date}
@@ -81,30 +81,34 @@ export const Table = ({ country }) => {
                     </td>
                     <td>
                       {printNumberwithCommas(data.Active)}{" "}
-                      <span>
-                        {data.ActiveDiff > 0 && "+"}{" "}
-                        {printNumberwithCommas(data.ActiveDiff)}
+                      <span className={data.ActiveDiff > 0 ? "plus" : "minus"}>
+                        ({data.ActiveDiff > 0 && "+"}
+                        {printNumberwithCommas(data.ActiveDiff)})
                       </span>
                     </td>
                     <td>
                       {printNumberwithCommas(data.Confirmed)}{" "}
-                      <span>
-                        {data.ConfirmedDiff > 0 && "+"}{" "}
-                        {printNumberwithCommas(data.ConfirmedDiff)}
+                      <span
+                        className={data.ConfirmedDiff > 0 ? "plus" : "minus"}
+                      >
+                        ({data.ConfirmedDiff > 0 && "+"}
+                        {printNumberwithCommas(data.ConfirmedDiff)})
                       </span>
                     </td>
                     <td>
                       {printNumberwithCommas(data.Recovered)}{" "}
-                      <span>
-                        {data.RecoveredDiff > 0 && "+"}{" "}
-                        {printNumberwithCommas(data.RecoveredDiff)}
+                      <span
+                        className={data.RecoveredDiff > 0 ? "plus" : "minus"}
+                      >
+                        ({data.RecoveredDiff > 0 && "+"}
+                        {printNumberwithCommas(data.RecoveredDiff)})
                       </span>
                     </td>
                     <td>
                       {printNumberwithCommas(data.Deaths)}{" "}
-                      <span>
-                        {data.DeathsDiff > 0 && "+"}{" "}
-                        {printNumberwithCommas(data.DeathsDiff)}
+                      <span className={data.DeathsDiff > 0 ? "plus" : "minus"}>
+                        ({data.DeathsDiff > 0 && "+"}
+                        {printNumberwithCommas(data.DeathsDiff)})
                       </span>
                     </td>
                   </tr>
@@ -116,3 +120,5 @@ export const Table = ({ country }) => {
     </Fragment>
   );
 };
+
+// https://codepen.io/nikhil8krishnan/pen/WvYPvv

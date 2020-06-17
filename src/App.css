@@ -42,10 +42,11 @@ a:hover {
 
 h1 {
   font-size: 45px;
+  line-height: 1.6;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 28px;
 }
 
 h4 {
@@ -420,7 +421,7 @@ p {
       -ms-flex-align: center;
           align-items: center;
   padding: 15px;
-  color: #0779e4;
+  color: #252525;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -434,19 +435,48 @@ p {
 }
 
 .main .table .intro p b {
-  color: #0779e4;
+  color: #000;
 }
 
 .main .table .tableContainer {
   width: 100%;
 }
 
+.main .table .tableContainer th {
+  background: #252525;
+  color: #fff !important;
+}
+
+.main .table .tableContainer tr:nth-child(even) {
+  background: #eee;
+}
+
 .main .table .tableContainer table,
 .main .table .tableContainer th,
 .main .table .tableContainer td {
-  border: 1px solid black;
+  border: 2px solid #888888;
   border-collapse: collapse;
   padding: 10px;
+  color: #252525;
+}
+
+.main .table .tableContainer table span,
+.main .table .tableContainer th span,
+.main .table .tableContainer td span {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.main .table .tableContainer table .plus,
+.main .table .tableContainer th .plus,
+.main .table .tableContainer td .plus {
+  color: #0779e4;
+}
+
+.main .table .tableContainer table .minus,
+.main .table .tableContainer th .minus,
+.main .table .tableContainer td .minus {
+  color: red;
 }
 
 .main .table .tableContainer table {
@@ -497,6 +527,7 @@ p {
     position: absolute;
     width: 100%;
     height: 100%;
+    top: 0;
     background: rgba(0, 0, 0, 0.5);
   }
 }
@@ -525,11 +556,77 @@ p {
   .main .status {
     margin-top: 0px;
   }
+  .main .table .tableContainer h2 {
+    font-size: 25px;
+  }
+  .main .table .tableContainer th,
+  .main .table .tableContainer td {
+    font-size: 15px;
+  }
+  .main .table .tableContainer th span,
+  .main .table .tableContainer td span {
+    font-size: 11px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   .main .status .singleStatus {
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .main .table h2 {
+    font-size: 23px;
+  }
+  .main .table p {
+    font-size: 14px;
+  }
+  .main .table .tableContainer table,
+  .main .table .tableContainer th,
+  .main .table .tableContainer td {
+    font-size: 13px;
+    padding: 5px;
+  }
+  .main .table .tableContainer table span,
+  .main .table .tableContainer th span,
+  .main .table .tableContainer td span {
+    font-size: 11px !important;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .main {
+    padding: 40px 10px;
+  }
+  .main .intro h1 {
+    font-size: 28px;
+  }
+  .main .intro p {
+    font-size: 13px;
+  }
+  .main .intro span {
+    font-size: 13px;
+  }
+  .main .intro .subIntro {
+    font-size: 11px;
+  }
+  .main .table h2 {
+    font-size: 18.5px;
+  }
+  .main .table p {
+    font-size: 13px;
+  }
+  .main .table .tableContainer table,
+  .main .table .tableContainer th,
+  .main .table .tableContainer td {
+    font-size: 11.5px;
+    padding: 2px;
+  }
+  .main .table .tableContainer table span,
+  .main .table .tableContainer th span,
+  .main .table .tableContainer td span {
+    font-size: 10px !important;
   }
 }
 /*# sourceMappingURL=App.css.map */

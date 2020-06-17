@@ -14,7 +14,7 @@ export const Status = ({ statusData }) => {
         <div className="active singleStatus">
           <span className="header">Active</span>
           <span className="data">{printNumberwithCommas(Number(Active))}</span>
-          <span class="link">
+          <span className="link">
             <a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">
               Live Dashboard by CSSE <i className="fas fa-angle-right"></i>
             </a>
@@ -25,7 +25,7 @@ export const Status = ({ statusData }) => {
           <span className="data">
             {printNumberwithCommas(Number(Confirmed))}
           </span>
-          <span class="link">
+          <span className="link">
             <a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">
               Live Dashboard by CSSE <i className="fas fa-angle-right"></i>
             </a>
@@ -36,7 +36,7 @@ export const Status = ({ statusData }) => {
           <span className="data">
             {printNumberwithCommas(Number(Recovered))}
           </span>
-          <span class="link">
+          <span className="link">
             <a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">
               Live Dashboard by CSSE <i className="fas fa-angle-right"></i>
             </a>
@@ -45,7 +45,7 @@ export const Status = ({ statusData }) => {
         <div className="deaths singleStatus">
           <span className="header">Deaths</span>
           <span className="data">{printNumberwithCommas(Number(Deaths))}</span>
-          <span class="link">
+          <span className="link">
             <a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">
               Live Dashboard by CSSE <i className="fas fa-angle-right"></i>
             </a>

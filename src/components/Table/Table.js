@@ -5,6 +5,7 @@ import "moment-timezone";
 
 export const Table = ({ country }) => {
   const [twoWeeksData, setTwoWeeksData] = useState();
+  const [regionalData, setRegionalData] = useState();
 
   // CONVERTING DATA INTO 2 WEEKS WITH DESIRED FORMAT
   const getTwoWeeksData = async () => {
@@ -39,6 +40,91 @@ export const Table = ({ country }) => {
     }
   };
 
+  // GETTING REGIONAL DATA WITH DESIRED FORMAT
+  const getRegionalData = async () => {
+    try {
+      let url = `https://api.covid19api.com/dayone/country/${country}`;
+      const res = await axios.get(url);
+      const numOfProvince = 13;
+      let regionalData = [];
+
+      for (let i = 1; i <= numOfProvince; i++) {
+        const provinceName = res.data[res.data.length - i].Province;
+        const confirmedNumber = res.data[res.data.length - i].Confirmed;
+        const deathNumber = res.data[res.data.length - i].Deaths;
+        const activeNumber = res.data[res.data.length - i].Active;
+        const recoveredNumber = res.data[res.data.length - i].Recovered;
+        const totalData = {
+          confirmedNumber,
+          deathNumber,
+          activeNumber,
+          recoveredNumber,
+        };
+
+        switch (provinceName) {
+          case "Quebec":
+            regionalData["Quebec"] = totalData;
+            break;
+
+          case "Ontario":
+            regionalData["Ontario"] = totalData;
+            break;
+
+          case "Alberta":
+            regionalData["Alberta"] = totalData;
+            break;
+
+          case "British Columbia":
+            regionalData["British Columbia"] = totalData;
+            break;
+
+          case "Saskatchewan":
+            regionalData["Saskatchewan"] = totalData;
+            break;
+
+          case "Manitoba":
+            regionalData["Manitoba"] = totalData;
+            break;
+
+          case "Yukon":
+            regionalData["Yukon"] = totalData;
+            break;
+
+          case "Nova Scotia":
+            regionalData["Nova Scotia"] = totalData;
+            break;
+
+          case "Northwest Territories":
+            regionalData["Northwest Territories"] = totalData;
+            break;
+
+          case "New Brunswick":
+            regionalData["New Brunswick"] = totalData;
+            break;
+
+          case "Newfoundland and Labrador":
+            regionalData["Newfoundland and Labrador"] = totalData;
+            break;
+
+          case "Grand Princess":
+            regionalData["Grand Princess"] = totalData;
+            break;
+
+          case "Prince Edward Island":
+            regionalData["Prince Edward Island"] = totalData;
+            break;
+          default:
+            console.log("etc province");
+            break;
+        }
+      }
+
+      console.log("!!", regionalData);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   // THOUSAND SEPARATOR
   const printNumberwithCommas = (number) => {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -46,6 +132,7 @@ export const Table = ({ country }) => {
 
   useEffect(() => {
     getTwoWeeksData();
+    getRegionalData();
   }, []);
   return (
     <Fragment>
@@ -62,63 +149,70 @@ export const Table = ({ country }) => {
         </div>
         <div className="tableContainer">
           <table>
-            <tr>
-              <th>Date</th>
-              <th>Active</th>
-              <th>Confirmed</th>
-              <th>Recovered</th>
-              <th>Deaths</th>
-            </tr>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Active</th>
+                <th>Confirmed</th>
+                <th>Recovered</th>
+                <th>Deaths</th>
+              </tr>
+            </thead>
 
-            {twoWeeksData &&
-              twoWeeksData.map((data, index) => {
-                return (
-                  <tr key={index}>
-                    <td>
-                      <Moment format="MM-DD" add={{ days: 1 }}>
-                        {data.Date}
-                      </Moment>
-                    </td>
-                    <td>
-                      {printNumberwithCommas(data.Active)}{" "}
-                      <span className={data.ActiveDiff > 0 ? "plus" : "minus"}>
-                        ({data.ActiveDiff > 0 && "+"}
-                        {printNumberwithCommas(data.ActiveDiff)})
-                      </span>
-                    </td>
-                    <td>
-                      {printNumberwithCommas(data.Confirmed)}{" "}
-                      <span
-                        className={data.ConfirmedDiff > 0 ? "plus" : "minus"}
-                      >
-                        ({data.ConfirmedDiff > 0 && "+"}
-                        {printNumberwithCommas(data.ConfirmedDiff)})
-                      </span>
-                    </td>
-                    <td>
-                      {printNumberwithCommas(data.Recovered)}{" "}
-                      <span
-                        className={data.RecoveredDiff > 0 ? "plus" : "minus"}
-                      >
-                        ({data.RecoveredDiff > 0 && "+"}
-                        {printNumberwithCommas(data.RecoveredDiff)})
-                      </span>
-                    </td>
-                    <td>
-                      {printNumberwithCommas(data.Deaths)}{" "}
-                      <span className={data.DeathsDiff > 0 ? "plus" : "minus"}>
-                        ({data.DeathsDiff > 0 && "+"}
-                        {printNumberwithCommas(data.DeathsDiff)})
-                      </span>
-                    </td>
-                  </tr>
-                );
-              })}
+            <tbody>
+              {twoWeeksData &&
+                twoWeeksData.map((data, index) => {
+                  return (
+                    <tr key={index}>
+                      <td>
+                        <Moment format="MM-DD" add={{ days: 1 }}>
+                          {data.Date}
+                        </Moment>
+                      </td>
+                      <td>
+                        {printNumberwithCommas(data.Active)}{" "}
+                        <span
+                          className={data.ActiveDiff > 0 ? "plus" : "minus"}
+                        >
+                          ({data.ActiveDiff > 0 && "+"}
+                          {printNumberwithCommas(data.ActiveDiff)})
+                        </span>
+                      </td>
+                      <td>
+                        {printNumberwithCommas(data.Confirmed)}{" "}
+                        <span
+                          className={data.ConfirmedDiff > 0 ? "plus" : "minus"}
+                        >
+                          ({data.ConfirmedDiff > 0 && "+"}
+                          {printNumberwithCommas(data.ConfirmedDiff)})
+                        </span>
+                      </td>
+                      <td>
+                        {printNumberwithCommas(data.Recovered)}{" "}
+                        <span
+                          className={data.RecoveredDiff > 0 ? "plus" : "minus"}
+                        >
+                          ({data.RecoveredDiff > 0 && "+"}
+                          {printNumberwithCommas(data.RecoveredDiff)})
+                        </span>
+                      </td>
+                      <td>
+                        {printNumberwithCommas(data.Deaths)}{" "}
+                        <span
+                          className={data.DeathsDiff > 0 ? "plus" : "minus"}
+                        >
+                          ({data.DeathsDiff > 0 && "+"}
+                          {printNumberwithCommas(data.DeathsDiff)})
+                        </span>
+                      </td>
+                    </tr>
+                  );
+                })}
+            </tbody>
           </table>
         </div>
       </section>
+      <section className="table2"></section>
     </Fragment>
   );
 };
-
-// https://codepen.io/nikhil8krishnan/pen/WvYPvv

@@ -266,21 +266,37 @@ p {
 .main .graphs .barGraph .header {
   width: 100%;
   height: 55px;
-  background: rgba(0, 0, 0, 0.03);
+  background: #eee;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .main .graphs .lineGraph .header h4,
 .main .graphs .barGraph .header h4 {
+  color: #0779e4;
+}
+
+.main .graphs .lineGraph .header a,
+.main .graphs .barGraph .header a {
+  color: #252525;
+  font-size: 16px;
+  margin: 0 10px;
+  -webkit-transition: 0.4s ease-in-out all;
+  transition: 0.4s ease-in-out all;
+}
+
+.main .graphs .lineGraph .header a:hover,
+.main .graphs .barGraph .header a:hover {
   color: #0779e4;
 }
 
@@ -398,7 +414,8 @@ p {
   background: #b81919;
 }
 
-.main .table {
+.main .table,
+.main .table2 {
   background: #fff;
   margin-top: 35px;
   border-radius: 5px;
@@ -407,10 +424,11 @@ p {
   width: 100%;
 }
 
-.main .table .intro .header {
+.main .table .intro .header,
+.main .table2 .intro .header {
   width: 100%;
   height: 65px;
-  background: rgba(0, 0, 0, 0.03);
+  background: #eee;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -421,12 +439,13 @@ p {
       -ms-flex-align: center;
           align-items: center;
   padding: 15px;
-  color: #252525;
+  color: #0779e4;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
 
-.main .table .intro p {
+.main .table .intro p,
+.main .table2 .intro p {
   padding: 15px;
   max-width: 850px;
   line-height: 1.5;
@@ -434,26 +453,33 @@ p {
   font-weight: 400;
 }
 
-.main .table .intro p b {
-  color: #000;
+.main .table .intro p b,
+.main .table2 .intro p b {
+  color: #0779e4;
 }
 
-.main .table .tableContainer {
+.main .table .tableContainer,
+.main .table2 .tableContainer {
   width: 100%;
 }
 
-.main .table .tableContainer th {
+.main .table .tableContainer th,
+.main .table2 .tableContainer th {
   background: #252525;
   color: #fff !important;
 }
 
-.main .table .tableContainer tr:nth-child(even) {
+.main .table .tableContainer tr:nth-child(even),
+.main .table2 .tableContainer tr:nth-child(even) {
   background: #eee;
 }
 
 .main .table .tableContainer table,
 .main .table .tableContainer th,
-.main .table .tableContainer td {
+.main .table .tableContainer td,
+.main .table2 .tableContainer table,
+.main .table2 .tableContainer th,
+.main .table2 .tableContainer td {
   border: 2px solid #888888;
   border-collapse: collapse;
   padding: 10px;
@@ -462,29 +488,40 @@ p {
 
 .main .table .tableContainer table span,
 .main .table .tableContainer th span,
-.main .table .tableContainer td span {
+.main .table .tableContainer td span,
+.main .table2 .tableContainer table span,
+.main .table2 .tableContainer th span,
+.main .table2 .tableContainer td span {
   font-size: 12px;
   font-weight: 600;
 }
 
 .main .table .tableContainer table .plus,
 .main .table .tableContainer th .plus,
-.main .table .tableContainer td .plus {
+.main .table .tableContainer td .plus,
+.main .table2 .tableContainer table .plus,
+.main .table2 .tableContainer th .plus,
+.main .table2 .tableContainer td .plus {
   color: #0779e4;
 }
 
 .main .table .tableContainer table .minus,
 .main .table .tableContainer th .minus,
-.main .table .tableContainer td .minus {
+.main .table .tableContainer td .minus,
+.main .table2 .tableContainer table .minus,
+.main .table2 .tableContainer th .minus,
+.main .table2 .tableContainer td .minus {
   color: red;
 }
 
-.main .table .tableContainer table {
+.main .table .tableContainer table,
+.main .table2 .tableContainer table {
   width: calc(100% - 30px);
   margin: 0 15px;
 }
 
-.main .table .tableContainer table tr {
+.main .table .tableContainer table tr,
+.main .table2 .tableContainer table tr {
   text-align: left;
   font-size: 20px;
 }
@@ -556,15 +593,20 @@ p {
   .main .status {
     margin-top: 0px;
   }
-  .main .table .tableContainer h2 {
+  .main .table .tableContainer h2,
+  .main .table2 .tableContainer h2 {
     font-size: 25px;
   }
   .main .table .tableContainer th,
-  .main .table .tableContainer td {
+  .main .table .tableContainer td,
+  .main .table2 .tableContainer th,
+  .main .table2 .tableContainer td {
     font-size: 15px;
   }
   .main .table .tableContainer th span,
-  .main .table .tableContainer td span {
+  .main .table .tableContainer td span,
+  .main .table2 .tableContainer th span,
+  .main .table2 .tableContainer td span {
     font-size: 11px;
   }
 }
@@ -576,21 +618,34 @@ p {
 }
 
 @media only screen and (max-width: 550px) {
-  .main .table h2 {
+  .main .graphs .lineGraph .graphContainer,
+  .main .graphs .barGraph .graphContainer {
+    padding: 5px;
+    padding-top: 10px;
+  }
+  .main .table h2,
+  .main .table2 h2 {
     font-size: 23px;
   }
-  .main .table p {
+  .main .table p,
+  .main .table2 p {
     font-size: 14px;
   }
   .main .table .tableContainer table,
   .main .table .tableContainer th,
-  .main .table .tableContainer td {
+  .main .table .tableContainer td,
+  .main .table2 .tableContainer table,
+  .main .table2 .tableContainer th,
+  .main .table2 .tableContainer td {
     font-size: 13px;
     padding: 5px;
   }
   .main .table .tableContainer table span,
   .main .table .tableContainer th span,
-  .main .table .tableContainer td span {
+  .main .table .tableContainer td span,
+  .main .table2 .tableContainer table span,
+  .main .table2 .tableContainer th span,
+  .main .table2 .tableContainer td span {
     font-size: 11px !important;
   }
 }
@@ -611,21 +666,29 @@ p {
   .main .intro .subIntro {
     font-size: 11px;
   }
-  .main .table h2 {
+  .main .table h2,
+  .main .table2 h2 {
     font-size: 18.5px;
   }
-  .main .table p {
+  .main .table p,
+  .main .table2 p {
     font-size: 13px;
   }
   .main .table .tableContainer table,
   .main .table .tableContainer th,
-  .main .table .tableContainer td {
+  .main .table .tableContainer td,
+  .main .table2 .tableContainer table,
+  .main .table2 .tableContainer th,
+  .main .table2 .tableContainer td {
     font-size: 11.5px;
     padding: 2px;
   }
   .main .table .tableContainer table span,
   .main .table .tableContainer th span,
-  .main .table .tableContainer td span {
+  .main .table .tableContainer td span,
+  .main .table2 .tableContainer table span,
+  .main .table2 .tableContainer th span,
+  .main .table2 .tableContainer td span {
     font-size: 10px !important;
   }
 }

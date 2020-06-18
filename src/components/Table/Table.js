@@ -3,9 +3,9 @@ import axios from "axios";
 import Moment from "react-moment";
 import "moment-timezone";
 
-export const Table = ({ country }) => {
+export const Table = ({ country, title, number }) => {
   const [twoWeeksData, setTwoWeeksData] = useState();
-  const [regionalData, setRegionalData] = useState();
+  const [regionalData, setRegionalData] = useState([]);
 
   // CONVERTING DATA INTO 2 WEEKS WITH DESIRED FORMAT
   const getTwoWeeksData = async () => {
@@ -45,7 +45,7 @@ export const Table = ({ country }) => {
     try {
       let url = `https://api.covid19api.com/dayone/country/${country}`;
       const res = await axios.get(url);
-      const numOfProvince = 13;
+      const numOfProvince = number;
       let regionalData = [];
 
       for (let i = 1; i <= numOfProvince; i++) {
@@ -59,67 +59,69 @@ export const Table = ({ country }) => {
           deathNumber,
           activeNumber,
           recoveredNumber,
+          provinceName,
         };
 
         switch (provinceName) {
-          case "Quebec":
-            regionalData["Quebec"] = totalData;
-            break;
-
-          case "Ontario":
-            regionalData["Ontario"] = totalData;
-            break;
-
           case "Alberta":
-            regionalData["Alberta"] = totalData;
+            regionalData[0] = totalData;
             break;
 
           case "British Columbia":
-            regionalData["British Columbia"] = totalData;
-            break;
-
-          case "Saskatchewan":
-            regionalData["Saskatchewan"] = totalData;
-            break;
-
-          case "Manitoba":
-            regionalData["Manitoba"] = totalData;
-            break;
-
-          case "Yukon":
-            regionalData["Yukon"] = totalData;
-            break;
-
-          case "Nova Scotia":
-            regionalData["Nova Scotia"] = totalData;
-            break;
-
-          case "Northwest Territories":
-            regionalData["Northwest Territories"] = totalData;
-            break;
-
-          case "New Brunswick":
-            regionalData["New Brunswick"] = totalData;
-            break;
-
-          case "Newfoundland and Labrador":
-            regionalData["Newfoundland and Labrador"] = totalData;
+            regionalData[1] = totalData;
             break;
 
           case "Grand Princess":
-            regionalData["Grand Princess"] = totalData;
+            regionalData[2] = totalData;
+            break;
+
+          case "New Brunswick":
+            regionalData[3] = totalData;
+            break;
+
+          case "Newfoundland and Labrador":
+            regionalData[4] = totalData;
+            break;
+
+          case "Northwest Territories":
+            regionalData[5] = totalData;
+            break;
+
+          case "Nova Scotia":
+            regionalData[6] = totalData;
+            break;
+
+          case "Manitoba":
+            regionalData[7] = totalData;
+            break;
+
+          case "Ontario":
+            regionalData[8] = totalData;
             break;
 
           case "Prince Edward Island":
-            regionalData["Prince Edward Island"] = totalData;
+            regionalData[9] = totalData;
             break;
+
+          case "Quebec":
+            regionalData[10] = totalData;
+            break;
+
+          case "Saskatchewan":
+            regionalData[11] = totalData;
+            break;
+
+          case "Yukon":
+            regionalData[12] = totalData;
+            break;
+
           default:
             console.log("etc province");
             break;
         }
       }
 
-      console.log("!!", regionalData);
+      setRegionalData(regionalData);
     } catch (err) {
       console.log(err);
     }
@@ -136,10 +138,10 @@ export const Table = ({ country }) => {
   }, []);
   return (
     <Fragment>
-      <section className="table">
+      <section className="table" id="table1">
         <div className="intro">
           <div className="header">
-            <h2>National Statistics Timeline</h2>
+            <h2>{title} Statistics Timeline</h2>
           </div>
           <p>
             Only 2 weeks worth of data are provided for the convinience. Feel
@@ -158,7 +160,6 @@ export const Table = ({ country }) => {
                 <th>Deaths</th>
               </tr>
             </thead>
-
             <tbody>
               {twoWeeksData &&
                 twoWeeksData.map((data, index) => {
@@ -212,7 +213,47 @@ export const Table = ({ country }) => {
           </table>
         </div>
       </section>
-      <section className="table2"></section>
+      <section className="table2" id="table2">
+        <div className="intro">
+          <div className="header">
+            <h2>Regional Statistics</h2>
+          </div>
+          <p>
+            The following table indicates the accumulated active, confirmed,
+            recovered and death statistics for 13 regional territories in
+            Canada. Please note that there could be a slight difference in the
+            following data with the real-time statistics.
+          </p>
+        </div>
+        <div className="tableContainer">
+          <table>
+            <thead>
+              <tr>
+                <th style={{ width: "28%" }}>Region</th>
+                <th style={{ width: "18%" }}>Active</th>
+                <th style={{ width: "18%" }}>Confirmed</th>
+                <th style={{ width: "18%" }}>Recovered</th>
+                <th style={{ width: "18%" }}>Deaths</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {regionalData &&
+                regionalData.map((data, index) => {
+                  return (
+                    <tr key={index}>
+                      <td>{data.provinceName}</td>
+                      <td>{printNumberwithCommas(data.activeNumber)}</td>
+                      <td>{printNumberwithCommas(data.confirmedNumber)} </td>
+                      <td>{printNumberwithCommas(data.recoveredNumber)}</td>
+                      <td>{printNumberwithCommas(data.deathNumber)}</td>
+                    </tr>
+                  );
+                })}
+            </tbody>
+          </table>
+        </div>
+      </section>
     </Fragment>
   );
 };

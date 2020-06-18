@@ -217,14 +217,27 @@ p {
       .header {
         width: 100%;
         height: 55px;
-        background: rgba(0, 0, 0, 0.03);
+        background: #eee;
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: center;
         padding: 15px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
 
         h4 {
           color: $darker-theme;
+        }
+
+        a {
+          color: #252525;
+          font-size: 16px;
+          margin: 0 10px;
+          transition: 0.4s ease-in-out all;
+
+          &:hover {
+            color: $theme-color;
+          }
         }
       }
 
@@ -327,7 +340,8 @@ p {
     }
   }
 
-  .table {
+  .table,
+  .table2 {
     background: #fff;
     margin-top: 35px;
     border-radius: 5px;
@@ -338,12 +352,12 @@ p {
       .header {
         width: 100%;
         height: 65px;
-        background: rgba(0, 0, 0, 0.03);
+        background: #eee;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         padding: 15px;
-        color: #252525;
+        color: $theme-color;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
       }
@@ -356,7 +370,7 @@ p {
         font-weight: 400;
 
         b {
-          color: #000;
+          color: $theme-color;
         }
       }
     }
@@ -488,7 +502,8 @@ p {
       margin-top: 0px;
     }
 
-    .table {
+    .table,
+    .table2 {
       .tableContainer {
         h2 {
           font-size: 25px;
@@ -519,7 +534,17 @@ p {
 
 @media only screen and (max-width: 550px) {
   .main {
-    .table {
+    .graphs {
+      .lineGraph,
+      .barGraph {
+        .graphContainer {
+          padding: 5px;
+          padding-top: 10px;
+        }
+      }
+    }
+    .table,
+    .table2 {
       h2 {
         font-size: 23px;
       }
@@ -562,7 +587,8 @@ p {
         font-size: 11px;
       }
     }
-    .table {
+    .table,
+    .table2 {
       h2 {
         font-size: 18.5px;
       }

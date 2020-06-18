@@ -158,6 +158,9 @@ export const Graph = ({ country, region }) => {
         <div className="lineGraph">
           <div className="header">
             <h4>{region} Daily Confirmed Chart</h4>
+            <a href="#table1">
+              <i className="fas fa-scroll"></i>
+            </a>
           </div>
           <div className="graphContainer">
             <NationalLineChart lineGraph={lineGraph} />
@@ -167,6 +170,9 @@ export const Graph = ({ country, region }) => {
         <div className="barGraph">
           <div className="header">
             <h4>Provicial Total Confirmed Chart</h4>
+            <a href="#table2">
+              <i className="fas fa-scroll"></i>
+            </a>
           </div>
           <div className="graphContainer">
             <NationalBarChart barGraph={barGraph} />

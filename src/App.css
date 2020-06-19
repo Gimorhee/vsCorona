@@ -191,7 +191,8 @@ p {
   display: block;
 }
 
-.main {
+.main,
+.korea {
   height: auto;
   background: -webkit-gradient(linear, left top, left bottom, from(#0028ff), to(#fff));
   background: linear-gradient(to bottom, #0028ff, #fff);
@@ -204,34 +205,40 @@ p {
   padding: 40px 25px;
 }
 
-.main .intro {
+.main .intro,
+.korea .intro {
   margin-bottom: 35px;
   width: 100%;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-.main .intro h1 {
+.main .intro h1,
+.korea .intro h1 {
   color: #fff;
 }
 
-.main .intro p {
+.main .intro p,
+.korea .intro p {
   color: #fff;
   margin-bottom: 10px;
 }
 
-.main .intro span {
+.main .intro span,
+.korea .intro span {
   display: block;
   color: #fff;
   font-size: 18px;
 }
 
-.main .intro .subIntro {
+.main .intro .subIntro,
+.korea .intro .subIntro {
   font-size: 14px;
   margin-left: 5px;
   margin-top: 3px;
 }
 
-.main .graphs {
+.main .graphs,
+.korea .graphs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -244,7 +251,9 @@ p {
 }
 
 .main .graphs .lineGraph,
-.main .graphs .barGraph {
+.main .graphs .barGraph,
+.korea .graphs .lineGraph,
+.korea .graphs .barGraph {
   height: auto;
   width: 49.3%;
   background: #fff;
@@ -263,7 +272,9 @@ p {
 }
 
 .main .graphs .lineGraph .header,
-.main .graphs .barGraph .header {
+.main .graphs .barGraph .header,
+.korea .graphs .lineGraph .header,
+.korea .graphs .barGraph .header {
   width: 100%;
   height: 55px;
   background: #eee;
@@ -282,12 +293,16 @@ p {
 }
 
 .main .graphs .lineGraph .header h4,
-.main .graphs .barGraph .header h4 {
+.main .graphs .barGraph .header h4,
+.korea .graphs .lineGraph .header h4,
+.korea .graphs .barGraph .header h4 {
   color: #0779e4;
 }
 
 .main .graphs .lineGraph .header a,
-.main .graphs .barGraph .header a {
+.main .graphs .barGraph .header a,
+.korea .graphs .lineGraph .header a,
+.korea .graphs .barGraph .header a {
   color: #252525;
   font-size: 16px;
   margin: 0 10px;
@@ -296,17 +311,22 @@ p {
 }
 
 .main .graphs .lineGraph .header a:hover,
-.main .graphs .barGraph .header a:hover {
+.main .graphs .barGraph .header a:hover,
+.korea .graphs .lineGraph .header a:hover,
+.korea .graphs .barGraph .header a:hover {
   color: #0779e4;
 }
 
 .main .graphs .lineGraph .graphContainer,
-.main .graphs .barGraph .graphContainer {
+.main .graphs .barGraph .graphContainer,
+.korea .graphs .lineGraph .graphContainer,
+.korea .graphs .barGraph .graphContainer {
   width: 100%;
   padding: 15px;
 }
 
-.main .status {
+.main .status,
+.korea .status {
   margin-top: 35px;
   width: 100%;
   border-radius: 5px;
@@ -320,11 +340,13 @@ p {
           justify-content: space-between;
 }
 
-.main .status span {
+.main .status span,
+.korea .status span {
   display: block;
 }
 
-.main .status .singleStatus {
+.main .status .singleStatus,
+.korea .status .singleStatus {
   width: 24%;
   color: #fff;
   border-radius: 10px;
@@ -333,19 +355,22 @@ p {
           box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.main .status .singleStatus .header {
+.main .status .singleStatus .header,
+.korea .status .singleStatus .header {
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 20px;
   padding: 20px;
 }
 
-.main .status .singleStatus .data {
+.main .status .singleStatus .data,
+.korea .status .singleStatus .data {
   font-size: 40px;
   padding: 20px;
 }
 
-.main .status .singleStatus .link {
+.main .status .singleStatus .link,
+.korea .status .singleStatus .link {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   height: 45px;
@@ -358,7 +383,8 @@ p {
           align-items: center;
 }
 
-.main .status .singleStatus .link a {
+.main .status .singleStatus .link a,
+.korea .status .singleStatus .link a {
   color: #fff;
   width: 100%;
   display: -webkit-box;
@@ -372,60 +398,75 @@ p {
           align-items: center;
 }
 
-.main .status .singleStatus .link a i {
+.main .status .singleStatus .link a i,
+.korea .status .singleStatus .link a i {
   -webkit-transition: 0.3s ease-in-out all;
   transition: 0.3s ease-in-out all;
 }
 
-.main .status .singleStatus .link a:hover i {
+.main .status .singleStatus .link a:hover i,
+.korea .status .singleStatus .link a:hover i {
   -webkit-transform: translateX(7px);
           transform: translateX(7px);
 }
 
-.main .status .active {
+.main .status .active,
+.korea .status .active {
   background: #00cfd5;
 }
 
-.main .status .active .link {
+.main .status .active .link,
+.korea .status .active .link {
   background: #06b8be;
 }
 
-.main .status .confirmed {
+.main .status .confirmed,
+.korea .status .confirmed {
   background: #fe9801;
 }
 
-.main .status .confirmed .link {
+.main .status .confirmed .link,
+.korea .status .confirmed .link {
   background: #cf8310;
 }
 
-.main .status .recovered {
+.main .status .recovered,
+.korea .status .recovered {
   background: #00ac69;
 }
 
-.main .status .recovered .link {
+.main .status .recovered .link,
+.korea .status .recovered .link {
   background: #049c62;
 }
 
-.main .status .deaths {
+.main .status .deaths,
+.korea .status .deaths {
   background: #ff0000;
 }
 
-.main .status .deaths .link {
+.main .status .deaths .link,
+.korea .status .deaths .link {
   background: #b81919;
 }
 
 .main .table,
-.main .table2 {
+.main .table2,
+.korea .table,
+.korea .table2 {
   background: #fff;
   margin-top: 35px;
   border-radius: 5px;
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
           box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
   width: 100%;
+  padding-bottom: 15px;
 }
 
 .main .table .intro .header,
-.main .table2 .intro .header {
+.main .table2 .intro .header,
+.korea .table .intro .header,
+.korea .table2 .intro .header {
   width: 100%;
   height: 65px;
   background: #eee;
@@ -445,7 +486,9 @@ p {
 }
 
 .main .table .intro p,
-.main .table2 .intro p {
+.main .table2 .intro p,
+.korea .table .intro p,
+.korea .table2 .intro p {
   padding: 15px;
   max-width: 850px;
   line-height: 1.5;
@@ -454,23 +497,31 @@ p {
 }
 
 .main .table .intro p b,
-.main .table2 .intro p b {
+.main .table2 .intro p b,
+.korea .table .intro p b,
+.korea .table2 .intro p b {
   color: #0779e4;
 }
 
 .main .table .tableContainer,
-.main .table2 .tableContainer {
+.main .table2 .tableContainer,
+.korea .table .tableContainer,
+.korea .table2 .tableContainer {
   width: 100%;
 }
 
 .main .table .tableContainer th,
-.main .table2 .tableContainer th {
+.main .table2 .tableContainer th,
+.korea .table .tableContainer th,
+.korea .table2 .tableContainer th {
   background: #252525;
   color: #fff !important;
 }
 
 .main .table .tableContainer tr:nth-child(even),
-.main .table2 .tableContainer tr:nth-child(even) {
+.main .table2 .tableContainer tr:nth-child(even),
+.korea .table .tableContainer tr:nth-child(even),
+.korea .table2 .tableContainer tr:nth-child(even) {
   background: #eee;
 }
 
@@ -479,7 +530,13 @@ p {
 .main .table .tableContainer td,
 .main .table2 .tableContainer table,
 .main .table2 .tableContainer th,
-.main .table2 .tableContainer td {
+.main .table2 .tableContainer td,
+.korea .table .tableContainer table,
+.korea .table .tableContainer th,
+.korea .table .tableContainer td,
+.korea .table2 .tableContainer table,
+.korea .table2 .tableContainer th,
+.korea .table2 .tableContainer td {
   border: 2px solid #888888;
   border-collapse: collapse;
   padding: 10px;
@@ -491,7 +548,13 @@ p {
 .main .table .tableContainer td span,
 .main .table2 .tableContainer table span,
 .main .table2 .tableContainer th span,
-.main .table2 .tableContainer td span {
+.main .table2 .tableContainer td span,
+.korea .table .tableContainer table span,
+.korea .table .tableContainer th span,
+.korea .table .tableContainer td span,
+.korea .table2 .tableContainer table span,
+.korea .table2 .tableContainer th span,
+.korea .table2 .tableContainer td span {
   font-size: 12px;
   font-weight: 600;
 }
@@ -501,7 +564,13 @@ p {
 .main .table .tableContainer td .plus,
 .main .table2 .tableContainer table .plus,
 .main .table2 .tableContainer th .plus,
-.main .table2 .tableContainer td .plus {
+.main .table2 .tableContainer td .plus,
+.korea .table .tableContainer table .plus,
+.korea .table .tableContainer th .plus,
+.korea .table .tableContainer td .plus,
+.korea .table2 .tableContainer table .plus,
+.korea .table2 .tableContainer th .plus,
+.korea .table2 .tableContainer td .plus {
   color: #0779e4;
 }
 
@@ -510,31 +579,62 @@ p {
 .main .table .tableContainer td .minus,
 .main .table2 .tableContainer table .minus,
 .main .table2 .tableContainer th .minus,
-.main .table2 .tableContainer td .minus {
+.main .table2 .tableContainer td .minus,
+.korea .table .tableContainer table .minus,
+.korea .table .tableContainer th .minus,
+.korea .table .tableContainer td .minus,
+.korea .table2 .tableContainer table .minus,
+.korea .table2 .tableContainer th .minus,
+.korea .table2 .tableContainer td .minus {
   color: red;
 }
 
+.main .table .tableContainer table .steady,
+.main .table .tableContainer th .steady,
+.main .table .tableContainer td .steady,
+.main .table2 .tableContainer table .steady,
+.main .table2 .tableContainer th .steady,
+.main .table2 .tableContainer td .steady,
+.korea .table .tableContainer table .steady,
+.korea .table .tableContainer th .steady,
+.korea .table .tableContainer td .steady,
+.korea .table2 .tableContainer table .steady,
+.korea .table2 .tableContainer th .steady,
+.korea .table2 .tableContainer td .steady {
+  color: green;
+}
+
 .main .table .tableContainer table,
-.main .table2 .tableContainer table {
+.main .table2 .tableContainer table,
+.korea .table .tableContainer table,
+.korea .table2 .tableContainer table {
   width: calc(100% - 30px);
   margin: 0 15px;
 }
 
 .main .table .tableContainer table tr,
-.main .table2 .tableContainer table tr {
+.main .table2 .tableContainer table tr,
+.korea .table .tableContainer table tr,
+.korea .table2 .tableContainer table tr {
   text-align: left;
   font-size: 20px;
 }
 
-.korea {
-  height: 100px;
-  background: blue;
-  position: absolute;
-  top: 50px;
-  left: 250px;
-  width: calc(100% - 250px);
-  -webkit-transition: 0.4s ease-in-out all;
-  transition: 0.4s ease-in-out all;
+.korea .graphs .lineGraph {
+  width: 100%;
+}
+
+.korea .graphs .lineGraph .graphContainer canvas {
+  max-height: 550px;
+}
+
+.korea .graphs .barGraph {
+  width: 0;
+  display: none;
+}
+
+.korea .table2 {
+  display: none;
 }
 
 .world {
@@ -549,14 +649,16 @@ p {
 }
 
 @media only screen and (max-width: 1200px) {
-  .main .status .singleStatus {
+  .main .status .singleStatus,
+  .korea .status .singleStatus {
     width: 49%;
     margin-bottom: 15px;
   }
 }
 
 @media only screen and (max-width: 1000px) {
-  .main {
+  .main,
+  .korea {
     left: 0;
     width: 100%;
   }
@@ -570,65 +672,90 @@ p {
 }
 
 @media only screen and (max-width: 767px) {
-  .main {
+  .main,
+  .korea {
     padding: 40px 15px;
   }
-  .main .intro h1 {
+  .main .intro h1,
+  .korea .intro h1 {
     font-size: 38px;
   }
-  .main .intro p {
+  .main .intro p,
+  .korea .intro p {
     font-size: 15px;
   }
-  .main .intro span {
+  .main .intro span,
+  .korea .intro span {
     font-size: 15px;
   }
-  .main .intro .subIntro {
+  .main .intro .subIntro,
+  .korea .intro .subIntro {
     font-size: 13px;
   }
   .main .graphs .lineGraph,
-  .main .graphs .barGraph {
+  .main .graphs .barGraph,
+  .korea .graphs .lineGraph,
+  .korea .graphs .barGraph {
     width: 100%;
     margin-bottom: 20px;
   }
-  .main .status {
+  .main .status,
+  .korea .status {
     margin-top: 0px;
   }
   .main .table .tableContainer h2,
-  .main .table2 .tableContainer h2 {
+  .main .table2 .tableContainer h2,
+  .korea .table .tableContainer h2,
+  .korea .table2 .tableContainer h2 {
     font-size: 25px;
   }
   .main .table .tableContainer th,
   .main .table .tableContainer td,
   .main .table2 .tableContainer th,
-  .main .table2 .tableContainer td {
+  .main .table2 .tableContainer td,
+  .korea .table .tableContainer th,
+  .korea .table .tableContainer td,
+  .korea .table2 .tableContainer th,
+  .korea .table2 .tableContainer td {
     font-size: 15px;
   }
   .main .table .tableContainer th span,
   .main .table .tableContainer td span,
   .main .table2 .tableContainer th span,
-  .main .table2 .tableContainer td span {
+  .main .table2 .tableContainer td span,
+  .korea .table .tableContainer th span,
+  .korea .table .tableContainer td span,
+  .korea .table2 .tableContainer th span,
+  .korea .table2 .tableContainer td span {
     font-size: 11px;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .main .status .singleStatus {
+  .main .status .singleStatus,
+  .korea .status .singleStatus {
     width: 100%;
   }
 }
 
 @media only screen and (max-width: 550px) {
   .main .graphs .lineGraph .graphContainer,
-  .main .graphs .barGraph .graphContainer {
+  .main .graphs .barGraph .graphContainer,
+  .korea .graphs .lineGraph .graphContainer,
+  .korea .graphs .barGraph .graphContainer {
     padding: 5px;
     padding-top: 10px;
   }
   .main .table h2,
-  .main .table2 h2 {
+  .main .table2 h2,
+  .korea .table h2,
+  .korea .table2 h2 {
     font-size: 23px;
   }
   .main .table p,
-  .main .table2 p {
+  .main .table2 p,
+  .korea .table p,
+  .korea .table2 p {
     font-size: 14px;
   }
   .main .table .tableContainer table,
@@ -636,7 +763,13 @@ p {
   .main .table .tableContainer td,
   .main .table2 .tableContainer table,
   .main .table2 .tableContainer th,
-  .main .table2 .tableContainer td {
+  .main .table2 .tableContainer td,
+  .korea .table .tableContainer table,
+  .korea .table .tableContainer th,
+  .korea .table .tableContainer td,
+  .korea .table2 .tableContainer table,
+  .korea .table2 .tableContainer th,
+  .korea .table2 .tableContainer td {
     font-size: 13px;
     padding: 5px;
   }
@@ -645,33 +778,48 @@ p {
   .main .table .tableContainer td span,
   .main .table2 .tableContainer table span,
   .main .table2 .tableContainer th span,
-  .main .table2 .tableContainer td span {
+  .main .table2 .tableContainer td span,
+  .korea .table .tableContainer table span,
+  .korea .table .tableContainer th span,
+  .korea .table .tableContainer td span,
+  .korea .table2 .tableContainer table span,
+  .korea .table2 .tableContainer th span,
+  .korea .table2 .tableContainer td span {
     font-size: 11px !important;
   }
 }
 
 @media only screen and (max-width: 350px) {
-  .main {
+  .main,
+  .korea {
     padding: 40px 10px;
   }
-  .main .intro h1 {
+  .main .intro h1,
+  .korea .intro h1 {
     font-size: 28px;
   }
-  .main .intro p {
+  .main .intro p,
+  .korea .intro p {
     font-size: 13px;
   }
-  .main .intro span {
+  .main .intro span,
+  .korea .intro span {
     font-size: 13px;
   }
-  .main .intro .subIntro {
+  .main .intro .subIntro,
+  .korea .intro .subIntro {
     font-size: 11px;
   }
   .main .table h2,
-  .main .table2 h2 {
+  .main .table2 h2,
+  .korea .table h2,
+  .korea .table2 h2 {
     font-size: 18.5px;
   }
   .main .table p,
-  .main .table2 p {
+  .main .table2 p,
+  .korea .table p,
+  .korea .table2 p {
     font-size: 13px;
   }
   .main .table .tableContainer table,
@@ -679,7 +827,13 @@ p {
   .main .table .tableContainer td,
   .main .table2 .tableContainer table,
   .main .table2 .tableContainer th,
-  .main .table2 .tableContainer td {
+  .main .table2 .tableContainer td,
+  .korea .table .tableContainer table,
+  .korea .table .tableContainer th,
+  .korea .table .tableContainer td,
+  .korea .table2 .tableContainer table,
+  .korea .table2 .tableContainer th,
+  .korea .table2 .tableContainer td {
     font-size: 11.5px;
     padding: 2px;
   }
@@ -688,7 +842,13 @@ p {
   .main .table .tableContainer td span,
   .main .table2 .tableContainer table span,
   .main .table2 .tableContainer th span,
-  .main .table2 .tableContainer td span {
+  .main .table2 .tableContainer td span,
+  .korea .table .tableContainer table span,
+  .korea .table .tableContainer th span,
+  .korea .table .tableContainer td span,
+  .korea .table2 .tableContainer table span,
+  .korea .table2 .tableContainer th span,
+  .korea .table2 .tableContainer td span {
     font-size: 10px !important;
   }
 }

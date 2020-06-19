@@ -31,7 +31,7 @@ export const Main = ({ showSubNav }) => {
     <Fragment>
       <div className={showSubNav ? "main" : "main noSubNav"}>
         <Intro region={"National"} Date={Date} />
-        <Graph region={"National"} country={"canada"} />
+        <Graph region={"National"} country={"canada"} days={14} />
         <Status statusData={canadaData} />
         <Table country={"canada"} title={"National"} number={"13"} />
         {showSubNav && <div className="darkBg"></div>}

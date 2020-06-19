@@ -173,7 +173,13 @@ export const Table = ({ country, title, number }) => {
                       <td>
                         {printNumberwithCommas(data.Active)}{" "}
                         <span
-                          className={data.ActiveDiff > 0 ? "plus" : "minus"}
+                          className={
+                            data.ActiveDiff === 0
+                              ? "steady"
+                              : data.ActiveDiff > 0
+                              ? "plus"
+                              : "minus"
+                          }
                         >
                           ({data.ActiveDiff > 0 && "+"}
                           {printNumberwithCommas(data.ActiveDiff)})
@@ -182,7 +188,13 @@ export const Table = ({ country, title, number }) => {
                       <td>
                         {printNumberwithCommas(data.Confirmed)}{" "}
                         <span
-                          className={data.ConfirmedDiff > 0 ? "plus" : "minus"}
+                          className={
+                            data.ConfirmedDiff === 0
+                              ? "steady"
+                              : data.ConfirmedDiff > 0
+                              ? "plus"
+                              : "minus"
+                          }
                         >
                           ({data.ConfirmedDiff > 0 && "+"}
                           {printNumberwithCommas(data.ConfirmedDiff)})
@@ -191,7 +203,13 @@ export const Table = ({ country, title, number }) => {
                       <td>
                         {printNumberwithCommas(data.Recovered)}{" "}
                         <span
-                          className={data.RecoveredDiff > 0 ? "plus" : "minus"}
+                          className={
+                            data.RecoveredDiff === 0
+                              ? "steady"
+                              : data.RecoveredDiff > 0
+                              ? "plus"
+                              : "minus"
+                          }
                         >
                           ({data.RecoveredDiff > 0 && "+"}
                           {printNumberwithCommas(data.RecoveredDiff)})
@@ -200,7 +218,13 @@ export const Table = ({ country, title, number }) => {
                       <td>
                         {printNumberwithCommas(data.Deaths)}{" "}
                         <span
-                          className={data.DeathsDiff > 0 ? "plus" : "minus"}
+                          className={
+                            data.DeathsDiff === 0
+                              ? "steady"
+                              : data.DeathsDiff > 0
+                              ? "plus"
+                              : "minus"
+                          }
                         >
                           ({data.DeathsDiff > 0 && "+"}
                           {printNumberwithCommas(data.DeathsDiff)})
@@ -229,11 +253,11 @@ export const Table = ({ country, title, number }) => {
           <table>
             <thead>
               <tr>
-                <th style={{ width: "28%" }}>Region</th>
-                <th style={{ width: "18%" }}>Active</th>
-                <th style={{ width: "18%" }}>Confirmed</th>
-                <th style={{ width: "18%" }}>Recovered</th>
-                <th style={{ width: "18%" }}>Deaths</th>
+                <th style={{ width: "25%" }}>Region</th>
+                <th style={{ width: "25%" }}>Active</th>
+                <th style={{ width: "25%" }}>Confirmed</th>
+                {/* <th style={{ width: "18%" }}>Recovered</th> */}
+                <th style={{ width: "25%" }}>Deaths</th>
               </tr>
             </thead>
 
@@ -245,7 +269,7 @@ export const Table = ({ country, title, number }) => {
                       <td>{data.provinceName}</td>
                       <td>{printNumberwithCommas(data.activeNumber)}</td>
                       <td>{printNumberwithCommas(data.confirmedNumber)} </td>
-                      <td>{printNumberwithCommas(data.recoveredNumber)}</td>
+                      {/* <td>{printNumberwithCommas(data.recoveredNumber)}</td> */}
                       <td>{printNumberwithCommas(data.deathNumber)}</td>
                     </tr>
                   );

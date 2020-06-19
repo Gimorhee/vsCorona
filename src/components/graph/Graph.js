@@ -3,7 +3,7 @@ import axios from "axios";
 import { NationalLineChart } from "./NationalLineChart";
 import { NationalBarChart } from "./NationalBarChart";
 
-export const Graph = ({ country, region }) => {
+export const Graph = ({ country, region, days }) => {
   const [lineGraph, setLineGraph] = useState({
     labels: [],
     datasets: [{}],
@@ -53,7 +53,7 @@ export const Graph = ({ country, region }) => {
     try {
       const res = await axios.get(url);
 
-      for (let i = 5; i > 0; i--) {
+      for (let i = days; i > 0; i--) {
         timeSet.push(res.data[res.data.length - i].Date);
         dataSet.push(res.data[res.data.length - i].Confirmed);
       }

@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from "react";
+import React, { useState, useLayoutEffect, useEffect } from "react";
 import { Main } from "./components/Main";
 import { Korea } from "./components/Korea";
 import { World } from "./components/World";
@@ -19,6 +19,10 @@ function App() {
     window.addEventListener("resize", updateSize);
     updateSize();
     return () => window.removeEventListener("resize", updateSize);
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
   }, []);
 
   const [subNav, setSubNav] = useState(width > 1000 ? true : false);

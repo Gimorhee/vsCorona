@@ -25,6 +25,7 @@ export const Korea = ({ showSubNav }) => {
 
   useEffect(() => {
     getCurrentData();
+    window.scrollTo(0, 0);
   }, []);
 
   return (

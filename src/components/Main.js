@@ -25,6 +25,7 @@ export const Main = ({ showSubNav }) => {
 
   useEffect(() => {
     getCurrentData();
+    window.scrollTo(0, 0);
   }, []);
 
   return (

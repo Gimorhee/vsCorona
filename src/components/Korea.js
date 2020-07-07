@@ -6,7 +6,7 @@ import { Graph } from "./Graph/Graph";
 import { Status } from "./Status/Status";
 import { Table } from "./Table/Table";
 
-export const Korea = ({ showSubNav }) => {
+export const Korea = ({ showSubNav, closeSubNav }) => {
   const [koreaData, setKoreaData] = useState({});
   const { Date } = koreaData;
 
@@ -35,7 +35,9 @@ export const Korea = ({ showSubNav }) => {
         <Graph region={"Korea"} country={"south-korea"} days={30} />
         <Status statusData={koreaData} />
         <Table country={"south-korea"} title={"Korea"} number={"13"} />
-        {showSubNav && <div className="darkBg"></div>}
+        {showSubNav && (
+          <div className="darkBg" onClick={() => closeSubNav()}></div>
+        )}{" "}
       </div>
     </Fragment>
   );

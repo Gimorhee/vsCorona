@@ -39,15 +39,21 @@ function App() {
         <Switch>
           <Route
             path="/korea"
-            render={(props) => <Korea {...props} showSubNav={subNav} />}
+            render={(props) => (
+              <Korea {...props} showSubNav={subNav} closeSubNav={closeSubNav} />
+            )}
           ></Route>
           <Route
             path="/world"
-            render={(props) => <World {...props} showSubNav={subNav} />}
+            render={(props) => (
+              <World {...props} showSubNav={subNav} closeSubNav={closeSubNav} />
+            )}
           ></Route>
           <Route
             path="/"
-            render={(props) => <Main {...props} showSubNav={subNav} />}
+            render={(props) => (
+              <Main {...props} showSubNav={subNav} closeSubNav={closeSubNav} />
+            )}
           ></Route>
         </Switch>
       </div>

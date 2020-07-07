@@ -161,7 +161,8 @@ p {
 
 // MAIN
 .main,
-.korea {
+.korea,
+.world {
   height: auto;
   background: linear-gradient(to bottom, #0028ff, #fff);
   position: absolute;
@@ -249,7 +250,8 @@ p {
     }
   }
 
-  .status {
+  .status,
+  .worldStatus {
     margin-top: 35px;
     width: 100%;
     border-radius: 5px;
@@ -278,6 +280,10 @@ p {
       .data {
         font-size: 40px;
         padding: 20px;
+
+        b {
+          font-size: 15px;
+        }
       }
 
       .link {
@@ -306,6 +312,10 @@ p {
           }
         }
       }
+    }
+
+    .globalStatus {
+      width: 33%;
     }
 
     .active {
@@ -451,15 +461,15 @@ p {
   }
 }
 
-.world {
-  height: 100px;
-  background: green;
-  position: absolute;
-  top: 50px;
-  left: 250px;
-  width: calc(100% - 250px);
-  transition: 0.4s ease-in-out all;
-}
+// .world {
+//   height: 100px;
+//   background: green;
+//   position: absolute;
+//   top: 50px;
+//   left: 250px;
+//   width: calc(100% - 250px);
+//   transition: 0.4s ease-in-out all;
+// }
 
 @media only screen and (max-width: 1200px) {
   .main,
@@ -471,11 +481,21 @@ p {
       }
     }
   }
+
+  .world {
+    .worldStatus {
+      .globalStatus {
+        width: 49%;
+        margin-bottom: 15px;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 1000px) {
   .main,
-  .korea {
+  .korea,
+  .world {
     left: 0;
     width: 100%;
   }
@@ -485,13 +505,15 @@ p {
     width: 100%;
     height: 100%;
     top: 0;
+    cursor: pointer;
     background: rgba(0, 0, 0, 0.5);
   }
 }
 
 @media only screen and (max-width: 767px) {
   .main,
-  .korea {
+  .korea,
+  .world {
     padding: 40px 15px;
 
     .intro {
@@ -549,6 +571,14 @@ p {
   .korea {
     .status {
       .singleStatus {
+        width: 100%;
+      }
+    }
+  }
+
+  .world {
+    .worldStatus {
+      .globalStatus {
         width: 100%;
       }
     }

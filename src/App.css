@@ -192,7 +192,8 @@ p {
 }
 
 .main,
-.korea {
+.korea,
+.world {
   height: auto;
   background: -webkit-gradient(linear, left top, left bottom, from(#0028ff), to(#fff));
   background: linear-gradient(to bottom, #0028ff, #fff);
@@ -206,39 +207,45 @@ p {
 }
 
 .main .intro,
-.korea .intro {
+.korea .intro,
+.world .intro {
   margin-bottom: 35px;
   width: 100%;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .main .intro h1,
-.korea .intro h1 {
+.korea .intro h1,
+.world .intro h1 {
   color: #fff;
 }
 
 .main .intro p,
-.korea .intro p {
+.korea .intro p,
+.world .intro p {
   color: #fff;
   margin-bottom: 10px;
 }
 
 .main .intro span,
-.korea .intro span {
+.korea .intro span,
+.world .intro span {
   display: block;
   color: #fff;
   font-size: 18px;
 }
 
 .main .intro .subIntro,
-.korea .intro .subIntro {
+.korea .intro .subIntro,
+.world .intro .subIntro {
   font-size: 14px;
   margin-left: 5px;
   margin-top: 3px;
 }
 
 .main .graphs,
-.korea .graphs {
+.korea .graphs,
+.world .graphs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -253,7 +260,9 @@ p {
 .main .graphs .lineGraph,
 .main .graphs .barGraph,
 .korea .graphs .lineGraph,
-.korea .graphs .barGraph {
+.korea .graphs .barGraph,
+.world .graphs .lineGraph,
+.world .graphs .barGraph {
   height: auto;
   width: 49.3%;
   background: #fff;
@@ -274,7 +283,9 @@ p {
 .main .graphs .lineGraph .header,
 .main .graphs .barGraph .header,
 .korea .graphs .lineGraph .header,
-.korea .graphs .barGraph .header {
+.korea .graphs .barGraph .header,
+.world .graphs .lineGraph .header,
+.world .graphs .barGraph .header {
   width: 100%;
   height: 55px;
   background: #eee;
@@ -295,14 +306,18 @@ p {
 .main .graphs .lineGraph .header h4,
 .main .graphs .barGraph .header h4,
 .korea .graphs .lineGraph .header h4,
-.korea .graphs .barGraph .header h4 {
+.korea .graphs .barGraph .header h4,
+.world .graphs .lineGraph .header h4,
+.world .graphs .barGraph .header h4 {
   color: #0779e4;
 }
 
 .main .graphs .lineGraph .header a,
 .main .graphs .barGraph .header a,
 .korea .graphs .lineGraph .header a,
-.korea .graphs .barGraph .header a {
+.korea .graphs .barGraph .header a,
+.world .graphs .lineGraph .header a,
+.world .graphs .barGraph .header a {
   color: #252525;
   font-size: 16px;
   margin: 0 10px;
@@ -313,20 +328,28 @@ p {
 .main .graphs .lineGraph .header a:hover,
 .main .graphs .barGraph .header a:hover,
 .korea .graphs .lineGraph .header a:hover,
-.korea .graphs .barGraph .header a:hover {
+.korea .graphs .barGraph .header a:hover,
+.world .graphs .lineGraph .header a:hover,
+.world .graphs .barGraph .header a:hover {
   color: #0779e4;
 }
 
 .main .graphs .lineGraph .graphContainer,
 .main .graphs .barGraph .graphContainer,
 .korea .graphs .lineGraph .graphContainer,
-.korea .graphs .barGraph .graphContainer {
+.korea .graphs .barGraph .graphContainer,
+.world .graphs .lineGraph .graphContainer,
+.world .graphs .barGraph .graphContainer {
   width: 100%;
   padding: 15px;
 }
 
 .main .status,
-.korea .status {
+.main .worldStatus,
+.korea .status,
+.korea .worldStatus,
+.world .status,
+.world .worldStatus {
   margin-top: 35px;
   width: 100%;
   border-radius: 5px;
@@ -341,12 +364,20 @@ p {
 }
 
 .main .status span,
-.korea .status span {
+.main .worldStatus span,
+.korea .status span,
+.korea .worldStatus span,
+.world .status span,
+.world .worldStatus span {
   display: block;
 }
 
 .main .status .singleStatus,
-.korea .status .singleStatus {
+.main .worldStatus .singleStatus,
+.korea .status .singleStatus,
+.korea .worldStatus .singleStatus,
+.world .status .singleStatus,
+.world .worldStatus .singleStatus {
   width: 24%;
   color: #fff;
   border-radius: 10px;
@@ -356,7 +387,11 @@ p {
 }
 
 .main .status .singleStatus .header,
-.korea .status .singleStatus .header {
+.main .worldStatus .singleStatus .header,
+.korea .status .singleStatus .header,
+.korea .worldStatus .singleStatus .header,
+.world .status .singleStatus .header,
+.world .worldStatus .singleStatus .header {
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 20px;
@@ -364,13 +399,30 @@ p {
 }
 
 .main .status .singleStatus .data,
-.korea .status .singleStatus .data {
+.main .worldStatus .singleStatus .data,
+.korea .status .singleStatus .data,
+.korea .worldStatus .singleStatus .data,
+.world .status .singleStatus .data,
+.world .worldStatus .singleStatus .data {
   font-size: 40px;
   padding: 20px;
 }
 
+.main .status .singleStatus .data b,
+.main .worldStatus .singleStatus .data b,
+.korea .status .singleStatus .data b,
+.korea .worldStatus .singleStatus .data b,
+.world .status .singleStatus .data b,
+.world .worldStatus .singleStatus .data b {
+  font-size: 15px;
+}
+
 .main .status .singleStatus .link,
-.korea .status .singleStatus .link {
+.main .worldStatus .singleStatus .link,
+.korea .status .singleStatus .link,
+.korea .worldStatus .singleStatus .link,
+.world .status .singleStatus .link,
+.world .worldStatus .singleStatus .link {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   height: 45px;
@@ -384,7 +436,11 @@ p {
 }
 
 .main .status .singleStatus .link a,
-.korea .status .singleStatus .link a {
+.main .worldStatus .singleStatus .link a,
+.korea .status .singleStatus .link a,
+.korea .worldStatus .singleStatus .link a,
+.world .status .singleStatus .link a,
+.world .worldStatus .singleStatus .link a {
   color: #fff;
   width: 100%;
   display: -webkit-box;
@@ -399,61 +455,112 @@ p {
 }
 
 .main .status .singleStatus .link a i,
-.korea .status .singleStatus .link a i {
+.main .worldStatus .singleStatus .link a i,
+.korea .status .singleStatus .link a i,
+.korea .worldStatus .singleStatus .link a i,
+.world .status .singleStatus .link a i,
+.world .worldStatus .singleStatus .link a i {
   -webkit-transition: 0.3s ease-in-out all;
   transition: 0.3s ease-in-out all;
 }
 
 .main .status .singleStatus .link a:hover i,
-.korea .status .singleStatus .link a:hover i {
+.main .worldStatus .singleStatus .link a:hover i,
+.korea .status .singleStatus .link a:hover i,
+.korea .worldStatus .singleStatus .link a:hover i,
+.world .status .singleStatus .link a:hover i,
+.world .worldStatus .singleStatus .link a:hover i {
   -webkit-transform: translateX(7px);
           transform: translateX(7px);
 }
 
+.main .status .globalStatus,
+.main .worldStatus .globalStatus,
+.korea .status .globalStatus,
+.korea .worldStatus .globalStatus,
+.world .status .globalStatus,
+.world .worldStatus .globalStatus {
+  width: 33%;
+}
+
 .main .status .active,
-.korea .status .active {
+.main .worldStatus .active,
+.korea .status .active,
+.korea .worldStatus .active,
+.world .status .active,
+.world .worldStatus .active {
   background: #00cfd5;
 }
 
 .main .status .active .link,
-.korea .status .active .link {
+.main .worldStatus .active .link,
+.korea .status .active .link,
+.korea .worldStatus .active .link,
+.world .status .active .link,
+.world .worldStatus .active .link {
   background: #06b8be;
 }
 
 .main .status .confirmed,
-.korea .status .confirmed {
+.main .worldStatus .confirmed,
+.korea .status .confirmed,
+.korea .worldStatus .confirmed,
+.world .status .confirmed,
+.world .worldStatus .confirmed {
   background: #fe9801;
 }
 
 .main .status .confirmed .link,
-.korea .status .confirmed .link {
+.main .worldStatus .confirmed .link,
+.korea .status .confirmed .link,
+.korea .worldStatus .confirmed .link,
+.world .status .confirmed .link,
+.world .worldStatus .confirmed .link {
   background: #cf8310;
 }
 
 .main .status .recovered,
-.korea .status .recovered {
+.main .worldStatus .recovered,
+.korea .status .recovered,
+.korea .worldStatus .recovered,
+.world .status .recovered,
+.world .worldStatus .recovered {
   background: #00ac69;
 }
 
 .main .status .recovered .link,
-.korea .status .recovered .link {
+.main .worldStatus .recovered .link,
+.korea .status .recovered .link,
+.korea .worldStatus .recovered .link,
+.world .status .recovered .link,
+.world .worldStatus .recovered .link {
   background: #049c62;
 }
 
 .main .status .deaths,
-.korea .status .deaths {
+.main .worldStatus .deaths,
+.korea .status .deaths,
+.korea .worldStatus .deaths,
+.world .status .deaths,
+.world .worldStatus .deaths {
   background: #ff0000;
 }
 
 .main .status .deaths .link,
-.korea .status .deaths .link {
+.main .worldStatus .deaths .link,
+.korea .status .deaths .link,
+.korea .worldStatus .deaths .link,
+.world .status .deaths .link,
+.world .worldStatus .deaths .link {
   background: #b81919;
 }
 
 .main .table,
 .main .table2,
 .korea .table,
-.korea .table2 {
+.korea .table2,
+.world .table,
+.world .table2 {
   background: #fff;
   margin-top: 35px;
   border-radius: 5px;
@@ -466,7 +573,9 @@ p {
 .main .table .intro .header,
 .main .table2 .intro .header,
 .korea .table .intro .header,
-.korea .table2 .intro .header {
+.korea .table2 .intro .header,
+.world .table .intro .header,
+.world .table2 .intro .header {
   width: 100%;
   height: 65px;
   background: #eee;
@@ -488,7 +597,9 @@ p {
 .main .table .intro p,
 .main .table2 .intro p,
 .korea .table .intro p,
-.korea .table2 .intro p {
+.korea .table2 .intro p,
+.world .table .intro p,
+.world .table2 .intro p {
   padding: 15px;
   max-width: 850px;
   line-height: 1.5;
@@ -499,21 +610,27 @@ p {
 .main .table .intro p b,
 .main .table2 .intro p b,
 .korea .table .intro p b,
-.korea .table2 .intro p b {
+.korea .table2 .intro p b,
+.world .table .intro p b,
+.world .table2 .intro p b {
   color: #0779e4;
 }
 
 .main .table .tableContainer,
 .main .table2 .tableContainer,
 .korea .table .tableContainer,
-.korea .table2 .tableContainer {
+.korea .table2 .tableContainer,
+.world .table .tableContainer,
+.world .table2 .tableContainer {
   width: 100%;
 }
 
 .main .table .tableContainer th,
 .main .table2 .tableContainer th,
 .korea .table .tableContainer th,
-.korea .table2 .tableContainer th {
+.korea .table2 .tableContainer th,
+.world .table .tableContainer th,
+.world .table2 .tableContainer th {
   background: #252525;
   color: #fff !important;
 }
@@ -521,7 +638,9 @@ p {
 .main .table .tableContainer tr:nth-child(even),
 .main .table2 .tableContainer tr:nth-child(even),
 .korea .table .tableContainer tr:nth-child(even),
-.korea .table2 .tableContainer tr:nth-child(even) {
+.korea .table2 .tableContainer tr:nth-child(even),
+.world .table .tableContainer tr:nth-child(even),
+.world .table2 .tableContainer tr:nth-child(even) {
   background: #eee;
 }
 
@@ -536,7 +655,13 @@ p {
 .korea .table .tableContainer td,
 .korea .table2 .tableContainer table,
 .korea .table2 .tableContainer th,
-.korea .table2 .tableContainer td {
+.korea .table2 .tableContainer td,
+.world .table .tableContainer table,
+.world .table .tableContainer th,
+.world .table .tableContainer td,
+.world .table2 .tableContainer table,
+.world .table2 .tableContainer th,
+.world .table2 .tableContainer td {
   border: 2px solid #888888;
   border-collapse: collapse;
   padding: 10px;
@@ -554,7 +679,13 @@ p {
 .korea .table .tableContainer td span,
 .korea .table2 .tableContainer table span,
 .korea .table2 .tableContainer th span,
-.korea .table2 .tableContainer td span {
+.korea .table2 .tableContainer td span,
+.world .table .tableContainer table span,
+.world .table .tableContainer th span,
+.world .table .tableContainer td span,
+.world .table2 .tableContainer table span,
+.world .table2 .tableContainer th span,
+.world .table2 .tableContainer td span {
   font-size: 12px;
   font-weight: 600;
 }
@@ -570,7 +701,13 @@ p {
 .korea .table .tableContainer td .plus,
 .korea .table2 .tableContainer table .plus,
 .korea .table2 .tableContainer th .plus,
-.korea .table2 .tableContainer td .plus {
+.korea .table2 .tableContainer td .plus,
+.world .table .tableContainer table .plus,
+.world .table .tableContainer th .plus,
+.world .table .tableContainer td .plus,
+.world .table2 .tableContainer table .plus,
+.world .table2 .tableContainer th .plus,
+.world .table2 .tableContainer td .plus {
   color: #0779e4;
 }
 
@@ -585,7 +722,13 @@ p {
 .korea .table .tableContainer td .minus,
 .korea .table2 .tableContainer table .minus,
 .korea .table2 .tableContainer th .minus,
-.korea .table2 .tableContainer td .minus {
+.korea .table2 .tableContainer td .minus,
+.world .table .tableContainer table .minus,
+.world .table .tableContainer th .minus,
+.world .table .tableContainer td .minus,
+.world .table2 .tableContainer table .minus,
+.world .table2 .tableContainer th .minus,
+.world .table2 .tableContainer td .minus {
   color: red;
 }
 
@@ -600,14 +743,22 @@ p {
 .korea .table .tableContainer td .steady,
 .korea .table2 .tableContainer table .steady,
 .korea .table2 .tableContainer th .steady,
-.korea .table2 .tableContainer td .steady {
+.korea .table2 .tableContainer td .steady,
+.world .table .tableContainer table .steady,
+.world .table .tableContainer th .steady,
+.world .table .tableContainer td .steady,
+.world .table2 .tableContainer table .steady,
+.world .table2 .tableContainer th .steady,
+.world .table2 .tableContainer td .steady {
   color: green;
 }
 
 .main .table .tableContainer table,
 .main .table2 .tableContainer table,
 .korea .table .tableContainer table,
-.korea .table2 .tableContainer table {
+.korea .table2 .tableContainer table,
+.world .table .tableContainer table,
+.world .table2 .tableContainer table {
   width: calc(100% - 30px);
   margin: 0 15px;
 }
@@ -615,7 +766,9 @@ p {
 .main .table .tableContainer table tr,
 .main .table2 .tableContainer table tr,
 .korea .table .tableContainer table tr,
-.korea .table2 .tableContainer table tr {
+.korea .table2 .tableContainer table tr,
+.world .table .tableContainer table tr,
+.world .table2 .tableContainer table tr {
   text-align: left;
   font-size: 20px;
 }
@@ -637,20 +790,13 @@ p {
   display: none;
 }
 
-.world {
-  height: 100px;
-  background: green;
-  position: absolute;
-  top: 50px;
-  left: 250px;
-  width: calc(100% - 250px);
-  -webkit-transition: 0.4s ease-in-out all;
-  transition: 0.4s ease-in-out all;
-}
-
 @media only screen and (max-width: 1200px) {
   .main .status .singleStatus,
   .korea .status .singleStatus {
+    width: 49%;
+    margin-bottom: 15px;
+  }
+  .world .worldStatus .globalStatus {
     width: 49%;
     margin-bottom: 15px;
   }
@@ -658,7 +804,8 @@ p {
 
 @media only screen and (max-width: 1000px) {
   .main,
-  .korea {
+  .korea,
+  .world {
     left: 0;
     width: 100%;
   }
@@ -667,46 +814,57 @@ p {
     width: 100%;
     height: 100%;
     top: 0;
+    cursor: pointer;
     background: rgba(0, 0, 0, 0.5);
   }
 }
 
 @media only screen and (max-width: 767px) {
   .main,
-  .korea {
+  .korea,
+  .world {
     padding: 40px 15px;
   }
   .main .intro h1,
-  .korea .intro h1 {
+  .korea .intro h1,
+  .world .intro h1 {
     font-size: 38px;
   }
   .main .intro p,
-  .korea .intro p {
+  .korea .intro p,
+  .world .intro p {
     font-size: 15px;
   }
   .main .intro span,
-  .korea .intro span {
+  .korea .intro span,
+  .world .intro span {
     font-size: 15px;
   }
   .main .intro .subIntro,
-  .korea .intro .subIntro {
+  .korea .intro .subIntro,
+  .world .intro .subIntro {
     font-size: 13px;
   }
   .main .graphs .lineGraph,
   .main .graphs .barGraph,
   .korea .graphs .lineGraph,
-  .korea .graphs .barGraph {
+  .korea .graphs .barGraph,
+  .world .graphs .lineGraph,
+  .world .graphs .barGraph {
     width: 100%;
     margin-bottom: 20px;
   }
   .main .status,
-  .korea .status {
+  .korea .status,
+  .world .status {
     margin-top: 0px;
   }
   .main .table .tableContainer h2,
   .main .table2 .tableContainer h2,
   .korea .table .tableContainer h2,
-  .korea .table2 .tableContainer h2 {
+  .korea .table2 .tableContainer h2,
+  .world .table .tableContainer h2,
+  .world .table2 .tableContainer h2 {
     font-size: 25px;
   }
   .main .table .tableContainer th,
@@ -716,7 +874,11 @@ p {
   .korea .table .tableContainer th,
   .korea .table .tableContainer td,
   .korea .table2 .tableContainer th,
-  .korea .table2 .tableContainer td {
+  .korea .table2 .tableContainer td,
+  .world .table .tableContainer th,
+  .world .table .tableContainer td,
+  .world .table2 .tableContainer th,
+  .world .table2 .tableContainer td {
     font-size: 15px;
   }
   .main .table .tableContainer th span,
@@ -726,7 +888,11 @@ p {
   .korea .table .tableContainer th span,
   .korea .table .tableContainer td span,
   .korea .table2 .tableContainer th span,
-  .korea .table2 .tableContainer td span {
+  .korea .table2 .tableContainer td span,
+  .world .table .tableContainer th span,
+  .world .table .tableContainer td span,
+  .world .table2 .tableContainer th span,
+  .world .table2 .tableContainer td span {
     font-size: 11px;
   }
 }
@@ -734,6 +900,9 @@ p {
 @media only screen and (max-width: 600px) {
   .main .status .singleStatus,
   .korea .status .singleStatus {
+    width: 100%;
+  }
+  .world .worldStatus .globalStatus {
     width: 100%;
   }
 }

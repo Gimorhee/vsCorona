@@ -71,7 +71,7 @@ export const Graph = ({ country, region, days }) => {
           lineTension: 0,
           backgroundColor: "#0779e4",
           borderColor: "rgba(0,0,0,1)",
-          borderWidth: 2,
+          borderWidth: 3,
           data: dataSet,
         },
       ],

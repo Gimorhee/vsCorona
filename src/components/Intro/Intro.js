@@ -15,7 +15,8 @@ export const Intro = ({ region, Date }) => {
           </Moment>
         </span>
         <span className="subIntro">
-          * There may be a slight difference in the following data.
+          * There may be some differences in the following data as these data
+          are getting called from other source.
         </span>
       </section>
     </Fragment>

@@ -1,13 +1,21 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
+import axios from "axios";
 
 export const Status = ({ statusData }) => {
+  const [recoveredData, setRecoveredData] = useState();
+
   // THOUSAND SEPARATOR
   const printNumberwithCommas = (number) => {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
 
-  const { Active, Confirmed, Recovered, Deaths } = statusData;
+  const { Active, Confirmed, Deaths } = statusData;
 
+  useEffect(() => {
+    const url = "https://corona.lmao.ninja/v2/countries/Canada";
+
+    axios.get(url).then((res) => setRecoveredData(res.data.recovered));
+  }, []);
   return (
     <Fragment>
       <section className="status">
@@ -34,7 +42,7 @@ export const Status = ({ statusData }) => {
         <div className="recovered singleStatus">
           <span className="header">Recovered</span>
           <span className="data">
-            {printNumberwithCommas(Number(Recovered))}
+            {printNumberwithCommas(Number(recoveredData))}
           </span>
           <span className="link">
             <a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">

@@ -156,7 +156,7 @@ export const Table = ({ country, title, number }) => {
                 <th>Date</th>
                 <th>Active</th>
                 <th>Confirmed</th>
-                <th>Recovered</th>
+                {/* <th>Recovered</th> */}
                 <th>Deaths</th>
               </tr>
             </thead>
@@ -165,12 +165,12 @@ export const Table = ({ country, title, number }) => {
                 twoWeeksData.map((data, index) => {
                   return (
                     <tr key={index}>
-                      <td>
+                      <td style={{ width: "25%" }}>
                         <Moment format="MM-DD" add={{ days: 1 }}>
                           {data.Date}
                         </Moment>
                       </td>
-                      <td>
+                      <td style={{ width: "25%" }}>
                         {printNumberwithCommas(data.Active)}{" "}
                         <span
                           className={
@@ -185,7 +185,7 @@ export const Table = ({ country, title, number }) => {
                           {printNumberwithCommas(data.ActiveDiff)})
                         </span>
                       </td>
-                      <td>
+                      <td style={{ width: "25%" }}>
                         {printNumberwithCommas(data.Confirmed)}{" "}
                         <span
                           className={
@@ -200,7 +200,7 @@ export const Table = ({ country, title, number }) => {
                           {printNumberwithCommas(data.ConfirmedDiff)})
                         </span>
                       </td>
-                      <td>
+                      {/* <td>
                         {printNumberwithCommas(data.Recovered)}{" "}
                         <span
                           className={
@@ -214,8 +214,8 @@ export const Table = ({ country, title, number }) => {
                           ({data.RecoveredDiff > 0 && "+"}
                           {printNumberwithCommas(data.RecoveredDiff)})
                         </span>
-                      </td>
-                      <td>
+                      </td> */}
+                      <td style={{ width: "25%" }}>
                         {printNumberwithCommas(data.Deaths)}{" "}
                         <span
                           className={

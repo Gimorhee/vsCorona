@@ -790,6 +790,46 @@ p {
   display: none;
 }
 
+.world .videoContainer {
+  height: 500px;
+}
+
+.world .worldTable .tableContainer {
+  max-height: 750px;
+  overflow: hidden;
+}
+
+.world .worldTable .tableContainer .showAllButton {
+  margin-bottom: 10px;
+  display: block;
+  background: #0779e4;
+  max-width: 200px;
+  margin-left: 15px;
+  padding: 10px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  -webkit-transition: 0.3s ease-in-out all;
+  transition: 0.3s ease-in-out all;
+  cursor: pointer;
+}
+
+.world .worldTable .tableContainer .showAllButton:hover {
+  background: #252525;
+}
+
+.world .worldTable .showAllCountries {
+  max-height: 100% !important;
+}
+
 @media only screen and (max-width: 1200px) {
   .main .status .singleStatus,
   .korea .status .singleStatus {

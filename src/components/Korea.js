@@ -37,7 +37,7 @@ export const Korea = ({ showSubNav, closeSubNav }) => {
         <Table country={"south-korea"} title={"Korea"} number={"13"} />
         {showSubNav && (
           <div className="darkBg" onClick={() => closeSubNav()}></div>
-        )}{" "}
+        )}
       </div>
     </Fragment>
   );

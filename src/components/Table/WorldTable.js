@@ -29,7 +29,7 @@ export const WorldTable = ({ countryData }) => {
           class="showAllButton"
           onClick={() => setAllCountries(!allCountries)}
         >
-          Click here to all data
+          Click here to see all data
         </span>
         <table>
           <thead>

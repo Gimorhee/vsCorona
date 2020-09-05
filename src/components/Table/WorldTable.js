@@ -11,7 +11,7 @@ export const WorldTable = ({ countryData }) => {
     <section className="table worldTable" id="table1">
       <div className="intro">
         <div className="header">
-          <h2>Worles Graph</h2>
+          <h2>Global Chart</h2>
         </div>
         <p>
           The following table indicates the accumulated confirmed, recovered,
@@ -29,7 +29,7 @@ export const WorldTable = ({ countryData }) => {
           class="showAllButton"
           onClick={() => setAllCountries(!allCountries)}
         >
-          Click here to see all data
+          Click to see {!allCountries ? "all" : "top"} countries
         </span>
         <table>
           <thead>

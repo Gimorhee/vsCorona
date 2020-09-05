@@ -468,13 +468,14 @@ p {
 
   .worldTable {
     .tableContainer {
+      width: 100%;
       max-height: 750px;
       overflow: hidden;
       .showAllButton {
         margin-bottom: 10px;
         display: block;
         background: $theme-color;
-        max-width: 200px;
+        max-width: 250px;
         margin-left: 15px;
         padding: 10px;
         color: #fff;
@@ -613,6 +614,7 @@ p {
 
 @media only screen and (max-width: 550px) {
   .main,
+  .world,
   .korea {
     .graphs {
       .lineGraph,
@@ -649,6 +651,7 @@ p {
 
 @media only screen and (max-width: 350px) {
   .main,
+  .world,
   .korea {
     padding: 40px 10px;
     .intro {

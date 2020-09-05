@@ -795,6 +795,7 @@ p {
 }
 
 .world .worldTable .tableContainer {
+  width: 100%;
   max-height: 750px;
   overflow: hidden;
 }
@@ -803,7 +804,7 @@ p {
   margin-bottom: 10px;
   display: block;
   background: #0779e4;
-  max-width: 200px;
+  max-width: 250px;
   margin-left: 15px;
   padding: 10px;
   color: #fff;
@@ -950,6 +951,8 @@ p {
 @media only screen and (max-width: 550px) {
   .main .graphs .lineGraph .graphContainer,
   .main .graphs .barGraph .graphContainer,
+  .world .graphs .lineGraph .graphContainer,
+  .world .graphs .barGraph .graphContainer,
   .korea .graphs .lineGraph .graphContainer,
   .korea .graphs .barGraph .graphContainer {
     padding: 5px;
@@ -957,12 +960,16 @@ p {
   }
   .main .table h2,
   .main .table2 h2,
+  .world .table h2,
+  .world .table2 h2,
   .korea .table h2,
   .korea .table2 h2 {
     font-size: 23px;
   }
   .main .table p,
   .main .table2 p,
+  .world .table p,
+  .world .table2 p,
   .korea .table p,
   .korea .table2 p {
     font-size: 14px;
@@ -973,6 +980,12 @@ p {
   .main .table2 .tableContainer table,
   .main .table2 .tableContainer th,
   .main .table2 .tableContainer td,
+  .world .table .tableContainer table,
+  .world .table .tableContainer th,
+  .world .table .tableContainer td,
+  .world .table2 .tableContainer table,
+  .world .table2 .tableContainer th,
+  .world .table2 .tableContainer td,
   .korea .table .tableContainer table,
   .korea .table .tableContainer th,
   .korea .table .tableContainer td,
@@ -988,6 +1001,12 @@ p {
   .main .table2 .tableContainer table span,
   .main .table2 .tableContainer th span,
   .main .table2 .tableContainer td span,
+  .world .table .tableContainer table span,
+  .world .table .tableContainer th span,
+  .world .table .tableContainer td span,
+  .world .table2 .tableContainer table span,
+  .world .table2 .tableContainer th span,
+  .world .table2 .tableContainer td span,
   .korea .table .tableContainer table span,
   .korea .table .tableContainer th span,
   .korea .table .tableContainer td span,
@@ -1000,33 +1019,42 @@ p {
 
 @media only screen and (max-width: 350px) {
   .main,
+  .world,
   .korea {
     padding: 40px 10px;
   }
   .main .intro h1,
+  .world .intro h1,
   .korea .intro h1 {
     font-size: 28px;
   }
   .main .intro p,
+  .world .intro p,
   .korea .intro p {
     font-size: 13px;
   }
   .main .intro span,
+  .world .intro span,
   .korea .intro span {
     font-size: 13px;
   }
   .main .intro .subIntro,
+  .world .intro .subIntro,
   .korea .intro .subIntro {
     font-size: 11px;
   }
   .main .table h2,
   .main .table2 h2,
+  .world .table h2,
+  .world .table2 h2,
   .korea .table h2,
   .korea .table2 h2 {
     font-size: 18.5px;
   }
   .main .table p,
   .main .table2 p,
+  .world .table p,
+  .world .table2 p,
   .korea .table p,
   .korea .table2 p {
     font-size: 13px;
@@ -1037,6 +1065,12 @@ p {
   .main .table2 .tableContainer table,
   .main .table2 .tableContainer th,
   .main .table2 .tableContainer td,
+  .world .table .tableContainer table,
+  .world .table .tableContainer th,
+  .world .table .tableContainer td,
+  .world .table2 .tableContainer table,
+  .world .table2 .tableContainer th,
+  .world .table2 .tableContainer td,
   .korea .table .tableContainer table,
   .korea .table .tableContainer th,
   .korea .table .tableContainer td,
@@ -1052,6 +1086,12 @@ p {
   .main .table2 .tableContainer table span,
   .main .table2 .tableContainer th span,
   .main .table2 .tableContainer td span,
+  .world .table .tableContainer table span,
+  .world .table .tableContainer th span,
+  .world .table .tableContainer td span,
+  .world .table2 .tableContainer table span,
+  .world .table2 .tableContainer th span,
+  .world .table2 .tableContainer td span,
   .korea .table .tableContainer table span,
   .korea .table .tableContainer th span,
   .korea .table .tableContainer td span,

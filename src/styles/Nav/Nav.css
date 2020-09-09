@@ -1,0 +1,120 @@
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  background: #fff;
+  -webkit-box-shadow: 1px 1px 3px #888888;
+          box-shadow: 1px 1px 3px #888888;
+  padding: 0 15px;
+  position: fixed;
+  width: 100%;
+  z-index: 101;
+}
+
+.nav .navLeft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav .navLeft .logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #252525;
+}
+
+.subNav {
+  position: fixed;
+  width: 250px;
+  height: calc(100vh - 50px);
+  top: 50px;
+  padding: 50px 25px;
+  left: 0;
+  z-index: 100;
+  background: #fff;
+  -webkit-box-shadow: 1px 1px 5px #888888;
+          box-shadow: 1px 1px 5px #888888;
+  -webkit-transition: 0.4s ease-in-out all;
+  transition: 0.4s ease-in-out all;
+}
+
+.subNav .dashboard,
+.subNav .relatedInfo {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.subNav .dashboard h4,
+.subNav .relatedInfo h4 {
+  margin-bottom: 15px;
+}
+
+.subNav .dashboard .selection,
+.subNav .relatedInfo .selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.subNav .dashboard .selection a,
+.subNav .relatedInfo .selection a {
+  margin: 10px 0;
+  color: #888888;
+}
+
+.subNav .dashboard .selection a i,
+.subNav .relatedInfo .selection a i {
+  margin-right: 10px;
+}
+
+.subNav .dashboard .selection a:hover,
+.subNav .relatedInfo .selection a:hover {
+  color: #0779e4;
+}
+
+.subNav .aboutMe {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 75px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #eeeeee;
+  font-size: 15px;
+}
+
+.subNav .aboutMe span {
+  display: block;
+}
+/*# sourceMappingURL=Nav.css.map */

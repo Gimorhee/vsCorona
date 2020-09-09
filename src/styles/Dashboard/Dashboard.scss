@@ -1,0 +1,551 @@
+// GLOBAL
+$theme-color: #0779e4;
+$darker-theme: #0779e4;
+$base-color: #888888;
+$dark-color: #252525;
+
+// MAIN
+.main,
+.korea,
+.world {
+  height: auto;
+  background: linear-gradient(to bottom, #0028ff, #fff);
+  position: absolute;
+  top: 50px;
+  left: 250px;
+  width: calc(100% - 250px);
+  transition: 0.4s ease-in-out all;
+  padding: 40px 25px;
+
+  .intro {
+    margin-bottom: 35px;
+    width: 100%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    h1 {
+      color: #fff;
+    }
+
+    p {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    span {
+      display: block;
+      color: #fff;
+      font-size: 18px;
+    }
+
+    .subIntro {
+      font-size: 14px;
+      margin-left: 5px;
+      margin-top: 3px;
+    }
+  }
+
+  .graphs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+
+    .lineGraph,
+    .barGraph {
+      height: auto;
+      width: 49.3%;
+      background: #fff;
+      border-radius: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+      .header {
+        width: 100%;
+        height: 55px;
+        background: #eee;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+        h4 {
+          color: $darker-theme;
+        }
+
+        a {
+          color: #252525;
+          font-size: 16px;
+          margin: 0 10px;
+          transition: 0.4s ease-in-out all;
+
+          &:hover {
+            color: $theme-color;
+          }
+        }
+      }
+
+      .graphContainer {
+        width: 100%;
+        padding: 15px;
+      }
+    }
+  }
+
+  .status,
+  .worldStatus {
+    margin-top: 35px;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    span {
+      display: block;
+    }
+
+    .singleStatus {
+      width: 24%;
+      color: #fff;
+      border-radius: 10px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+      .header {
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        padding: 20px;
+      }
+
+      .data {
+        font-size: 40px;
+        padding: 20px;
+
+        b {
+          font-size: 15px;
+        }
+      }
+
+      .link {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        height: 45px;
+        display: flex;
+        padding: 0 20px;
+        align-items: center;
+
+        a {
+          color: #fff;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          i {
+            transition: 0.3s ease-in-out all;
+          }
+
+          &:hover {
+            i {
+              transform: translateX(7px);
+            }
+          }
+        }
+      }
+    }
+
+    .globalStatus {
+      width: 33%;
+    }
+
+    .active {
+      background: #00cfd5;
+
+      .link {
+        background: #06b8be;
+      }
+    }
+
+    .confirmed {
+      background: #fe9801;
+
+      .link {
+        background: #cf8310;
+      }
+    }
+
+    .recovered {
+      background: #00ac69;
+
+      .link {
+        background: #049c62;
+      }
+    }
+
+    .deaths {
+      background: #ff0000;
+
+      .link {
+        background: #b81919;
+      }
+    }
+  }
+
+  .table,
+  .table2 {
+    background: #fff;
+    margin-top: 35px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    padding-bottom: 15px;
+
+    .intro {
+      .header {
+        width: 100%;
+        height: 65px;
+        background: #eee;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 15px;
+        color: $theme-color;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      p {
+        padding: 15px;
+        max-width: 850px;
+        line-height: 1.5;
+        color: #252525;
+        font-weight: 400;
+
+        b {
+          color: $theme-color;
+        }
+      }
+    }
+
+    .tableContainer {
+      width: 100%;
+
+      th {
+        background: #252525;
+        color: #fff !important;
+      }
+
+      tr:nth-child(even) {
+        background: #eee;
+      }
+
+      table,
+      th,
+      td {
+        border: 2px solid $base-color;
+        border-collapse: collapse;
+        padding: 10px;
+        color: #252525;
+
+        span {
+          font-size: 12px;
+          font-weight: 600;
+        }
+
+        .plus {
+          color: $theme-color;
+        }
+
+        .minus {
+          color: red;
+        }
+
+        .steady {
+          color: green;
+        }
+      }
+
+      table {
+        width: calc(100% - 30px);
+        margin: 0 15px;
+
+        tr {
+          text-align: left;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+.korea {
+  .graphs {
+    .lineGraph {
+      width: 100%;
+
+      .graphContainer {
+        canvas {
+          max-height: 550px;
+        }
+      }
+    }
+
+    .barGraph {
+      width: 0;
+      display: none;
+    }
+  }
+
+  .table2 {
+    display: none;
+  }
+}
+
+.world {
+  .videoContainer {
+    height: 500px;
+  }
+
+  .worldTable {
+    .tableContainer {
+      width: 100%;
+      max-height: 750px;
+      overflow: hidden;
+      .buttonContainer {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 15px;
+        .showAllButton {
+          width: 150px;
+          margin-bottom: 10px;
+          background: $theme-color;
+          max-width: 150px;
+          padding: 10px;
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 5px;
+          transition: 0.3s ease-in-out all;
+          cursor: pointer;
+
+          i {
+            margin-left: 5px;
+          }
+
+          &:hover {
+            background: $dark-color;
+          }
+        }
+      }
+    }
+
+    .showAllCountries {
+      max-height: 100% !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .main,
+  .korea {
+    .status {
+      .singleStatus {
+        width: 49%;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .world {
+    .worldStatus {
+      .globalStatus {
+        width: 49%;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .main,
+  .korea,
+  .world {
+    left: 0;
+    width: 100%;
+  }
+
+  .darkBg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .main,
+  .korea,
+  .world {
+    padding: 40px 15px;
+
+    .intro {
+      h1 {
+        font-size: 38px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+
+      span {
+        font-size: 15px;
+      }
+
+      .subIntro {
+        font-size: 13px;
+      }
+    }
+
+    .graphs {
+      .lineGraph,
+      .barGraph {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+
+    .status {
+      margin-top: 0px;
+    }
+
+    .table,
+    .table2 {
+      .tableContainer {
+        h2 {
+          font-size: 25px;
+        }
+
+        th,
+        td {
+          font-size: 15px;
+
+          span {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main,
+  .korea {
+    .status {
+      .singleStatus {
+        width: 100%;
+      }
+    }
+  }
+
+  .world {
+    .worldStatus {
+      .globalStatus {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .main,
+  .world,
+  .korea {
+    .graphs {
+      .lineGraph,
+      .barGraph {
+        .graphContainer {
+          padding: 5px;
+          padding-top: 10px;
+        }
+      }
+    }
+    .table,
+    .table2 {
+      h2 {
+        font-size: 23px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+      .tableContainer {
+        table,
+        th,
+        td {
+          font-size: 13px;
+          padding: 5px;
+          span {
+            font-size: 11px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .main,
+  .world,
+  .korea {
+    padding: 40px 10px;
+    .intro {
+      h1 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+
+      span {
+        font-size: 13px;
+      }
+
+      .subIntro {
+        font-size: 11px;
+      }
+    }
+    .table,
+    .table2 {
+      h2 {
+        font-size: 18.5px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+
+      .tableContainer {
+        table,
+        th,
+        td {
+          font-size: 11.5px;
+          padding: 2px;
+
+          span {
+            font-size: 10px !important;
+          }
+        }
+      }
+    }
+  }
+}

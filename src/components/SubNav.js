@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import "../styles/Nav/Nav.css";
 
 export const SubNav = ({ showSubNav }) => {
   let pathname = useLocation().pathname;
@@ -24,7 +25,7 @@ export const SubNav = ({ showSubNav }) => {
         {/* NEED TO WORK LATER */}
         <h4>CORANA INFO</h4>
         <div className="selection">
-          <Link to="#">
+          <Link to="/corona">
             <i className="fas fa-virus"></i>What is Corona19?
           </Link>
           <Link to="#">

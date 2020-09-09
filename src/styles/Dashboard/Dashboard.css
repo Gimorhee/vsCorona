@@ -1,0 +1,924 @@
+.main,
+.korea,
+.world {
+  height: auto;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0028ff), to(#fff));
+  background: linear-gradient(to bottom, #0028ff, #fff);
+  position: absolute;
+  top: 50px;
+  left: 250px;
+  width: calc(100% - 250px);
+  -webkit-transition: 0.4s ease-in-out all;
+  transition: 0.4s ease-in-out all;
+  padding: 40px 25px;
+}
+
+.main .intro,
+.korea .intro,
+.world .intro {
+  margin-bottom: 35px;
+  width: 100%;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.main .intro h1,
+.korea .intro h1,
+.world .intro h1 {
+  color: #fff;
+}
+
+.main .intro p,
+.korea .intro p,
+.world .intro p {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.main .intro span,
+.korea .intro span,
+.world .intro span {
+  display: block;
+  color: #fff;
+  font-size: 18px;
+}
+
+.main .intro .subIntro,
+.korea .intro .subIntro,
+.world .intro .subIntro {
+  font-size: 14px;
+  margin-left: 5px;
+  margin-top: 3px;
+}
+
+.main .graphs,
+.korea .graphs,
+.world .graphs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.main .graphs .lineGraph,
+.main .graphs .barGraph,
+.korea .graphs .lineGraph,
+.korea .graphs .barGraph,
+.world .graphs .lineGraph,
+.world .graphs .barGraph {
+  height: auto;
+  width: 49.3%;
+  background: #fff;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.main .graphs .lineGraph .header,
+.main .graphs .barGraph .header,
+.korea .graphs .lineGraph .header,
+.korea .graphs .barGraph .header,
+.world .graphs .lineGraph .header,
+.world .graphs .barGraph .header {
+  width: 100%;
+  height: 55px;
+  background: #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.main .graphs .lineGraph .header h4,
+.main .graphs .barGraph .header h4,
+.korea .graphs .lineGraph .header h4,
+.korea .graphs .barGraph .header h4,
+.world .graphs .lineGraph .header h4,
+.world .graphs .barGraph .header h4 {
+  color: #0779e4;
+}
+
+.main .graphs .lineGraph .header a,
+.main .graphs .barGraph .header a,
+.korea .graphs .lineGraph .header a,
+.korea .graphs .barGraph .header a,
+.world .graphs .lineGraph .header a,
+.world .graphs .barGraph .header a {
+  color: #252525;
+  font-size: 16px;
+  margin: 0 10px;
+  -webkit-transition: 0.4s ease-in-out all;
+  transition: 0.4s ease-in-out all;
+}
+
+.main .graphs .lineGraph .header a:hover,
+.main .graphs .barGraph .header a:hover,
+.korea .graphs .lineGraph .header a:hover,
+.korea .graphs .barGraph .header a:hover,
+.world .graphs .lineGraph .header a:hover,
+.world .graphs .barGraph .header a:hover {
+  color: #0779e4;
+}
+
+.main .graphs .lineGraph .graphContainer,
+.main .graphs .barGraph .graphContainer,
+.korea .graphs .lineGraph .graphContainer,
+.korea .graphs .barGraph .graphContainer,
+.world .graphs .lineGraph .graphContainer,
+.world .graphs .barGraph .graphContainer {
+  width: 100%;
+  padding: 15px;
+}
+
+.main .status,
+.main .worldStatus,
+.korea .status,
+.korea .worldStatus,
+.world .status,
+.world .worldStatus {
+  margin-top: 35px;
+  width: 100%;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .status span,
+.main .worldStatus span,
+.korea .status span,
+.korea .worldStatus span,
+.world .status span,
+.world .worldStatus span {
+  display: block;
+}
+
+.main .status .singleStatus,
+.main .worldStatus .singleStatus,
+.korea .status .singleStatus,
+.korea .worldStatus .singleStatus,
+.world .status .singleStatus,
+.world .worldStatus .singleStatus {
+  width: 24%;
+  color: #fff;
+  border-radius: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.main .status .singleStatus .header,
+.main .worldStatus .singleStatus .header,
+.korea .status .singleStatus .header,
+.korea .worldStatus .singleStatus .header,
+.world .status .singleStatus .header,
+.world .worldStatus .singleStatus .header {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.main .status .singleStatus .data,
+.main .worldStatus .singleStatus .data,
+.korea .status .singleStatus .data,
+.korea .worldStatus .singleStatus .data,
+.world .status .singleStatus .data,
+.world .worldStatus .singleStatus .data {
+  font-size: 40px;
+  padding: 20px;
+}
+
+.main .status .singleStatus .data b,
+.main .worldStatus .singleStatus .data b,
+.korea .status .singleStatus .data b,
+.korea .worldStatus .singleStatus .data b,
+.world .status .singleStatus .data b,
+.world .worldStatus .singleStatus .data b {
+  font-size: 15px;
+}
+
+.main .status .singleStatus .link,
+.main .worldStatus .singleStatus .link,
+.korea .status .singleStatus .link,
+.korea .worldStatus .singleStatus .link,
+.world .status .singleStatus .link,
+.world .worldStatus .singleStatus .link {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .status .singleStatus .link a,
+.main .worldStatus .singleStatus .link a,
+.korea .status .singleStatus .link a,
+.korea .worldStatus .singleStatus .link a,
+.world .status .singleStatus .link a,
+.world .worldStatus .singleStatus .link a {
+  color: #fff;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .status .singleStatus .link a i,
+.main .worldStatus .singleStatus .link a i,
+.korea .status .singleStatus .link a i,
+.korea .worldStatus .singleStatus .link a i,
+.world .status .singleStatus .link a i,
+.world .worldStatus .singleStatus .link a i {
+  -webkit-transition: 0.3s ease-in-out all;
+  transition: 0.3s ease-in-out all;
+}
+
+.main .status .singleStatus .link a:hover i,
+.main .worldStatus .singleStatus .link a:hover i,
+.korea .status .singleStatus .link a:hover i,
+.korea .worldStatus .singleStatus .link a:hover i,
+.world .status .singleStatus .link a:hover i,
+.world .worldStatus .singleStatus .link a:hover i {
+  -webkit-transform: translateX(7px);
+          transform: translateX(7px);
+}
+
+.main .status .globalStatus,
+.main .worldStatus .globalStatus,
+.korea .status .globalStatus,
+.korea .worldStatus .globalStatus,
+.world .status .globalStatus,
+.world .worldStatus .globalStatus {
+  width: 33%;
+}
+
+.main .status .active,
+.main .worldStatus .active,
+.korea .status .active,
+.korea .worldStatus .active,
+.world .status .active,
+.world .worldStatus .active {
+  background: #00cfd5;
+}
+
+.main .status .active .link,
+.main .worldStatus .active .link,
+.korea .status .active .link,
+.korea .worldStatus .active .link,
+.world .status .active .link,
+.world .worldStatus .active .link {
+  background: #06b8be;
+}
+
+.main .status .confirmed,
+.main .worldStatus .confirmed,
+.korea .status .confirmed,
+.korea .worldStatus .confirmed,
+.world .status .confirmed,
+.world .worldStatus .confirmed {
+  background: #fe9801;
+}
+
+.main .status .confirmed .link,
+.main .worldStatus .confirmed .link,
+.korea .status .confirmed .link,
+.korea .worldStatus .confirmed .link,
+.world .status .confirmed .link,
+.world .worldStatus .confirmed .link {
+  background: #cf8310;
+}
+
+.main .status .recovered,
+.main .worldStatus .recovered,
+.korea .status .recovered,
+.korea .worldStatus .recovered,
+.world .status .recovered,
+.world .worldStatus .recovered {
+  background: #00ac69;
+}
+
+.main .status .recovered .link,
+.main .worldStatus .recovered .link,
+.korea .status .recovered .link,
+.korea .worldStatus .recovered .link,
+.world .status .recovered .link,
+.world .worldStatus .recovered .link {
+  background: #049c62;
+}
+
+.main .status .deaths,
+.main .worldStatus .deaths,
+.korea .status .deaths,
+.korea .worldStatus .deaths,
+.world .status .deaths,
+.world .worldStatus .deaths {
+  background: #ff0000;
+}
+
+.main .status .deaths .link,
+.main .worldStatus .deaths .link,
+.korea .status .deaths .link,
+.korea .worldStatus .deaths .link,
+.world .status .deaths .link,
+.world .worldStatus .deaths .link {
+  background: #b81919;
+}
+
+.main .table,
+.main .table2,
+.korea .table,
+.korea .table2,
+.world .table,
+.world .table2 {
+  background: #fff;
+  margin-top: 35px;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+.main .table .intro .header,
+.main .table2 .intro .header,
+.korea .table .intro .header,
+.korea .table2 .intro .header,
+.world .table .intro .header,
+.world .table2 .intro .header {
+  width: 100%;
+  height: 65px;
+  background: #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  color: #0779e4;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.main .table .intro p,
+.main .table2 .intro p,
+.korea .table .intro p,
+.korea .table2 .intro p,
+.world .table .intro p,
+.world .table2 .intro p {
+  padding: 15px;
+  max-width: 850px;
+  line-height: 1.5;
+  color: #252525;
+  font-weight: 400;
+}
+
+.main .table .intro p b,
+.main .table2 .intro p b,
+.korea .table .intro p b,
+.korea .table2 .intro p b,
+.world .table .intro p b,
+.world .table2 .intro p b {
+  color: #0779e4;
+}
+
+.main .table .tableContainer,
+.main .table2 .tableContainer,
+.korea .table .tableContainer,
+.korea .table2 .tableContainer,
+.world .table .tableContainer,
+.world .table2 .tableContainer {
+  width: 100%;
+}
+
+.main .table .tableContainer th,
+.main .table2 .tableContainer th,
+.korea .table .tableContainer th,
+.korea .table2 .tableContainer th,
+.world .table .tableContainer th,
+.world .table2 .tableContainer th {
+  background: #252525;
+  color: #fff !important;
+}
+
+.main .table .tableContainer tr:nth-child(even),
+.main .table2 .tableContainer tr:nth-child(even),
+.korea .table .tableContainer tr:nth-child(even),
+.korea .table2 .tableContainer tr:nth-child(even),
+.world .table .tableContainer tr:nth-child(even),
+.world .table2 .tableContainer tr:nth-child(even) {
+  background: #eee;
+}
+
+.main .table .tableContainer table,
+.main .table .tableContainer th,
+.main .table .tableContainer td,
+.main .table2 .tableContainer table,
+.main .table2 .tableContainer th,
+.main .table2 .tableContainer td,
+.korea .table .tableContainer table,
+.korea .table .tableContainer th,
+.korea .table .tableContainer td,
+.korea .table2 .tableContainer table,
+.korea .table2 .tableContainer th,
+.korea .table2 .tableContainer td,
+.world .table .tableContainer table,
+.world .table .tableContainer th,
+.world .table .tableContainer td,
+.world .table2 .tableContainer table,
+.world .table2 .tableContainer th,
+.world .table2 .tableContainer td {
+  border: 2px solid #888888;
+  border-collapse: collapse;
+  padding: 10px;
+  color: #252525;
+}
+
+.main .table .tableContainer table span,
+.main .table .tableContainer th span,
+.main .table .tableContainer td span,
+.main .table2 .tableContainer table span,
+.main .table2 .tableContainer th span,
+.main .table2 .tableContainer td span,
+.korea .table .tableContainer table span,
+.korea .table .tableContainer th span,
+.korea .table .tableContainer td span,
+.korea .table2 .tableContainer table span,
+.korea .table2 .tableContainer th span,
+.korea .table2 .tableContainer td span,
+.world .table .tableContainer table span,
+.world .table .tableContainer th span,
+.world .table .tableContainer td span,
+.world .table2 .tableContainer table span,
+.world .table2 .tableContainer th span,
+.world .table2 .tableContainer td span {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.main .table .tableContainer table .plus,
+.main .table .tableContainer th .plus,
+.main .table .tableContainer td .plus,
+.main .table2 .tableContainer table .plus,
+.main .table2 .tableContainer th .plus,
+.main .table2 .tableContainer td .plus,
+.korea .table .tableContainer table .plus,
+.korea .table .tableContainer th .plus,
+.korea .table .tableContainer td .plus,
+.korea .table2 .tableContainer table .plus,
+.korea .table2 .tableContainer th .plus,
+.korea .table2 .tableContainer td .plus,
+.world .table .tableContainer table .plus,
+.world .table .tableContainer th .plus,
+.world .table .tableContainer td .plus,
+.world .table2 .tableContainer table .plus,
+.world .table2 .tableContainer th .plus,
+.world .table2 .tableContainer td .plus {
+  color: #0779e4;
+}
+
+.main .table .tableContainer table .minus,
+.main .table .tableContainer th .minus,
+.main .table .tableContainer td .minus,
+.main .table2 .tableContainer table .minus,
+.main .table2 .tableContainer th .minus,
+.main .table2 .tableContainer td .minus,
+.korea .table .tableContainer table .minus,
+.korea .table .tableContainer th .minus,
+.korea .table .tableContainer td .minus,
+.korea .table2 .tableContainer table .minus,
+.korea .table2 .tableContainer th .minus,
+.korea .table2 .tableContainer td .minus,
+.world .table .tableContainer table .minus,
+.world .table .tableContainer th .minus,
+.world .table .tableContainer td .minus,
+.world .table2 .tableContainer table .minus,
+.world .table2 .tableContainer th .minus,
+.world .table2 .tableContainer td .minus {
+  color: red;
+}
+
+.main .table .tableContainer table .steady,
+.main .table .tableContainer th .steady,
+.main .table .tableContainer td .steady,
+.main .table2 .tableContainer table .steady,
+.main .table2 .tableContainer th .steady,
+.main .table2 .tableContainer td .steady,
+.korea .table .tableContainer table .steady,
+.korea .table .tableContainer th .steady,
+.korea .table .tableContainer td .steady,
+.korea .table2 .tableContainer table .steady,
+.korea .table2 .tableContainer th .steady,
+.korea .table2 .tableContainer td .steady,
+.world .table .tableContainer table .steady,
+.world .table .tableContainer th .steady,
+.world .table .tableContainer td .steady,
+.world .table2 .tableContainer table .steady,
+.world .table2 .tableContainer th .steady,
+.world .table2 .tableContainer td .steady {
+  color: green;
+}
+
+.main .table .tableContainer table,
+.main .table2 .tableContainer table,
+.korea .table .tableContainer table,
+.korea .table2 .tableContainer table,
+.world .table .tableContainer table,
+.world .table2 .tableContainer table {
+  width: calc(100% - 30px);
+  margin: 0 15px;
+}
+
+.main .table .tableContainer table tr,
+.main .table2 .tableContainer table tr,
+.korea .table .tableContainer table tr,
+.korea .table2 .tableContainer table tr,
+.world .table .tableContainer table tr,
+.world .table2 .tableContainer table tr {
+  text-align: left;
+  font-size: 20px;
+}
+
+.korea .graphs .lineGraph {
+  width: 100%;
+}
+
+.korea .graphs .lineGraph .graphContainer canvas {
+  max-height: 550px;
+}
+
+.korea .graphs .barGraph {
+  width: 0;
+  display: none;
+}
+
+.korea .table2 {
+  display: none;
+}
+
+.world .videoContainer {
+  height: 500px;
+}
+
+.world .worldTable .tableContainer {
+  width: 100%;
+  max-height: 750px;
+  overflow: hidden;
+}
+
+.world .worldTable .tableContainer .buttonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 15px;
+}
+
+.world .worldTable .tableContainer .buttonContainer .showAllButton {
+  width: 150px;
+  margin-bottom: 10px;
+  background: #0779e4;
+  max-width: 150px;
+  padding: 10px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  -webkit-transition: 0.3s ease-in-out all;
+  transition: 0.3s ease-in-out all;
+  cursor: pointer;
+}
+
+.world .worldTable .tableContainer .buttonContainer .showAllButton i {
+  margin-left: 5px;
+}
+
+.world .worldTable .tableContainer .buttonContainer .showAllButton:hover {
+  background: #252525;
+}
+
+.world .worldTable .showAllCountries {
+  max-height: 100% !important;
+}
+
+@media only screen and (max-width: 1200px) {
+  .main .status .singleStatus,
+  .korea .status .singleStatus {
+    width: 49%;
+    margin-bottom: 15px;
+  }
+  .world .worldStatus .globalStatus {
+    width: 49%;
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .main,
+  .korea,
+  .world {
+    left: 0;
+    width: 100%;
+  }
+  .darkBg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .main,
+  .korea,
+  .world {
+    padding: 40px 15px;
+  }
+  .main .intro h1,
+  .korea .intro h1,
+  .world .intro h1 {
+    font-size: 38px;
+  }
+  .main .intro p,
+  .korea .intro p,
+  .world .intro p {
+    font-size: 15px;
+  }
+  .main .intro span,
+  .korea .intro span,
+  .world .intro span {
+    font-size: 15px;
+  }
+  .main .intro .subIntro,
+  .korea .intro .subIntro,
+  .world .intro .subIntro {
+    font-size: 13px;
+  }
+  .main .graphs .lineGraph,
+  .main .graphs .barGraph,
+  .korea .graphs .lineGraph,
+  .korea .graphs .barGraph,
+  .world .graphs .lineGraph,
+  .world .graphs .barGraph {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .main .status,
+  .korea .status,
+  .world .status {
+    margin-top: 0px;
+  }
+  .main .table .tableContainer h2,
+  .main .table2 .tableContainer h2,
+  .korea .table .tableContainer h2,
+  .korea .table2 .tableContainer h2,
+  .world .table .tableContainer h2,
+  .world .table2 .tableContainer h2 {
+    font-size: 25px;
+  }
+  .main .table .tableContainer th,
+  .main .table .tableContainer td,
+  .main .table2 .tableContainer th,
+  .main .table2 .tableContainer td,
+  .korea .table .tableContainer th,
+  .korea .table .tableContainer td,
+  .korea .table2 .tableContainer th,
+  .korea .table2 .tableContainer td,
+  .world .table .tableContainer th,
+  .world .table .tableContainer td,
+  .world .table2 .tableContainer th,
+  .world .table2 .tableContainer td {
+    font-size: 15px;
+  }
+  .main .table .tableContainer th span,
+  .main .table .tableContainer td span,
+  .main .table2 .tableContainer th span,
+  .main .table2 .tableContainer td span,
+  .korea .table .tableContainer th span,
+  .korea .table .tableContainer td span,
+  .korea .table2 .tableContainer th span,
+  .korea .table2 .tableContainer td span,
+  .world .table .tableContainer th span,
+  .world .table .tableContainer td span,
+  .world .table2 .tableContainer th span,
+  .world .table2 .tableContainer td span {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main .status .singleStatus,
+  .korea .status .singleStatus {
+    width: 100%;
+  }
+  .world .worldStatus .globalStatus {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .main .graphs .lineGraph .graphContainer,
+  .main .graphs .barGraph .graphContainer,
+  .world .graphs .lineGraph .graphContainer,
+  .world .graphs .barGraph .graphContainer,
+  .korea .graphs .lineGraph .graphContainer,
+  .korea .graphs .barGraph .graphContainer {
+    padding: 5px;
+    padding-top: 10px;
+  }
+  .main .table h2,
+  .main .table2 h2,
+  .world .table h2,
+  .world .table2 h2,
+  .korea .table h2,
+  .korea .table2 h2 {
+    font-size: 23px;
+  }
+  .main .table p,
+  .main .table2 p,
+  .world .table p,
+  .world .table2 p,
+  .korea .table p,
+  .korea .table2 p {
+    font-size: 14px;
+  }
+  .main .table .tableContainer table,
+  .main .table .tableContainer th,
+  .main .table .tableContainer td,
+  .main .table2 .tableContainer table,
+  .main .table2 .tableContainer th,
+  .main .table2 .tableContainer td,
+  .world .table .tableContainer table,
+  .world .table .tableContainer th,
+  .world .table .tableContainer td,
+  .world .table2 .tableContainer table,
+  .world .table2 .tableContainer th,
+  .world .table2 .tableContainer td,
+  .korea .table .tableContainer table,
+  .korea .table .tableContainer th,
+  .korea .table .tableContainer td,
+  .korea .table2 .tableContainer table,
+  .korea .table2 .tableContainer th,
+  .korea .table2 .tableContainer td {
+    font-size: 13px;
+    padding: 5px;
+  }
+  .main .table .tableContainer table span,
+  .main .table .tableContainer th span,
+  .main .table .tableContainer td span,
+  .main .table2 .tableContainer table span,
+  .main .table2 .tableContainer th span,
+  .main .table2 .tableContainer td span,
+  .world .table .tableContainer table span,
+  .world .table .tableContainer th span,
+  .world .table .tableContainer td span,
+  .world .table2 .tableContainer table span,
+  .world .table2 .tableContainer th span,
+  .world .table2 .tableContainer td span,
+  .korea .table .tableContainer table span,
+  .korea .table .tableContainer th span,
+  .korea .table .tableContainer td span,
+  .korea .table2 .tableContainer table span,
+  .korea .table2 .tableContainer th span,
+  .korea .table2 .tableContainer td span {
+    font-size: 11px !important;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .main,
+  .world,
+  .korea {
+    padding: 40px 10px;
+  }
+  .main .intro h1,
+  .world .intro h1,
+  .korea .intro h1 {
+    font-size: 28px;
+  }
+  .main .intro p,
+  .world .intro p,
+  .korea .intro p {
+    font-size: 13px;
+  }
+  .main .intro span,
+  .world .intro span,
+  .korea .intro span {
+    font-size: 13px;
+  }
+  .main .intro .subIntro,
+  .world .intro .subIntro,
+  .korea .intro .subIntro {
+    font-size: 11px;
+  }
+  .main .table h2,
+  .main .table2 h2,
+  .world .table h2,
+  .world .table2 h2,
+  .korea .table h2,
+  .korea .table2 h2 {
+    font-size: 18.5px;
+  }
+  .main .table p,
+  .main .table2 p,
+  .world .table p,
+  .world .table2 p,
+  .korea .table p,
+  .korea .table2 p {
+    font-size: 13px;
+  }
+  .main .table .tableContainer table,
+  .main .table .tableContainer th,
+  .main .table .tableContainer td,
+  .main .table2 .tableContainer table,
+  .main .table2 .tableContainer th,
+  .main .table2 .tableContainer td,
+  .world .table .tableContainer table,
+  .world .table .tableContainer th,
+  .world .table .tableContainer td,
+  .world .table2 .tableContainer table,
+  .world .table2 .tableContainer th,
+  .world .table2 .tableContainer td,
+  .korea .table .tableContainer table,
+  .korea .table .tableContainer th,
+  .korea .table .tableContainer td,
+  .korea .table2 .tableContainer table,
+  .korea .table2 .tableContainer th,
+  .korea .table2 .tableContainer td {
+    font-size: 11.5px;
+    padding: 2px;
+  }
+  .main .table .tableContainer table span,
+  .main .table .tableContainer th span,
+  .main .table .tableContainer td span,
+  .main .table2 .tableContainer table span,
+  .main .table2 .tableContainer th span,
+  .main .table2 .tableContainer td span,
+  .world .table .tableContainer table span,
+  .world .table .tableContainer th span,
+  .world .table .tableContainer td span,
+  .world .table2 .tableContainer table span,
+  .world .table2 .tableContainer th span,
+  .world .table2 .tableContainer td span,
+  .korea .table .tableContainer table span,
+  .korea .table .tableContainer th span,
+  .korea .table .tableContainer td span,
+  .korea .table2 .tableContainer table span,
+  .korea .table2 .tableContainer th span,
+  .korea .table2 .tableContainer td span {
+    font-size: 10px !important;
+  }
+}
+/*# sourceMappingURL=Dashboard.css.map */

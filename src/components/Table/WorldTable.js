@@ -15,7 +15,7 @@ export const WorldTable = ({ countryData }) => {
         </div>
         <p>
           The following table indicates the accumulated confirmed, recovered,
-          and death statistics for all countries in the WOrld. Please note that
+          and death statistics for all countries in the World. Please note that
           there could be a slight difference in the following data with the
           real-time statistics.
         </p>
@@ -25,12 +25,19 @@ export const WorldTable = ({ countryData }) => {
           allCountries ? "tableContainer showAllCountries" : "tableContainer"
         }
       >
-        <span
-          class="showAllButton"
-          onClick={() => setAllCountries(!allCountries)}
-        >
-          Click to see {!allCountries ? "all" : "top"} countries
-        </span>
+        <div class="buttonContainer">
+          <span
+            class="showAllButton"
+            onClick={() => setAllCountries(!allCountries)}
+          >
+            Show {!allCountries ? "More" : "Less"}
+            {!allCountries ? (
+              <i class="fas fa-angle-down"></i>
+            ) : (
+              <i class="fas fa-angle-up"></i>
+            )}
+          </span>
+        </div>
         <table>
           <thead>
             <tr>

@@ -9,7 +9,7 @@ export const Status = ({ statusData }) => {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
 
-  const { Active, Confirmed, Deaths } = statusData;
+  const { Active, Confirmed, Recovered, Deaths } = statusData;
 
   useEffect(() => {
     const url = "https://corona.lmao.ninja/v2/countries/Canada";
@@ -42,7 +42,11 @@ export const Status = ({ statusData }) => {
         <div className="recovered singleStatus">
           <span className="header">Recovered</span>
           <span className="data">
-            {printNumberwithCommas(Number(recoveredData))}
+            {printNumberwithCommas(
+              Number(
+                window.location.pathname === "/" ? recoveredData : Recovered
+              )
+            )}
           </span>
           <span className="link">
             <a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">

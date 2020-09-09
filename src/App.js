@@ -2,6 +2,7 @@ import React, { useState, useLayoutEffect, useEffect } from "react";
 import { Main } from "./components/Main";
 import { Korea } from "./components/Korea";
 import { World } from "./components/World";
+import { Corona } from "./components/Corona";
 import { Nav } from "./components/Nav";
 import { SubNav } from "./components/SubNav";
 
@@ -47,6 +48,16 @@ function App() {
             path="/world"
             render={(props) => (
               <World {...props} showSubNav={subNav} closeSubNav={closeSubNav} />
+            )}
+          ></Route>
+          <Route
+            path="/corona"
+            render={(props) => (
+              <Corona
+                {...props}
+                showSubNav={subNav}
+                closeSubNav={closeSubNav}
+              />
             )}
           ></Route>
           <Route

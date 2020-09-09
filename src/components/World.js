@@ -9,6 +9,10 @@ export const World = ({ showSubNav, closeSubNav }) => {
   const [worldData, setWorldData] = useState({});
   const [countryData, setCountryData] = useState();
 
+  const Date = countryData && countryData[0].Date;
+
+  // console.log("X", countryData && countryData[0].Date);
+
   const compareData = (a, b) => {
     if (a.TotalConfirmed < b.TotalConfirmed) {
       return 1;

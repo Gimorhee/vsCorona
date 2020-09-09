@@ -7,7 +7,7 @@ export const Intro = ({ region, Date }) => {
     <Fragment>
       <section className="intro">
         <h1>{region} Dashboard</h1>
-        <p>vsCorona is built with 'COVID19 API' by Postman.</p>
+        <p>vsCorona is built with 'CORONAVIRUS COVID19 API' - Postman</p>
         <span>
           Last Update:{" "}
           <Moment format="YYYY-MM-DD" add={{ days: 1 }}>
@@ -15,8 +15,8 @@ export const Intro = ({ region, Date }) => {
           </Moment>
         </span>
         <span className="subIntro">
-          * There may be some differences in the following data as these data
-          are getting called from other source.
+          * Please note that the following data might not be 100% accurate and
+          up-to-date as this data is getting called from another source.
         </span>
       </section>
     </Fragment>

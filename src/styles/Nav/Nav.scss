@@ -1,0 +1,92 @@
+// GLOBAL
+$theme-color: #0779e4;
+$darker-theme: #0779e4;
+$base-color: #888888;
+$dark-color: #252525;
+
+// NAV
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  background: #fff;
+  box-shadow: 1px 1px 3px $base-color;
+  padding: 0 15px;
+  position: fixed;
+  width: 100%;
+  z-index: 101;
+
+  .navLeft {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 100%;
+    justify-content: space-between;
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: $dark-color;
+    }
+  }
+}
+
+// SUB NAV
+.subNav {
+  position: fixed;
+  width: 250px;
+  height: calc(100vh - 50px);
+  top: 50px;
+  padding: 50px 25px;
+  left: 0;
+  z-index: 100;
+  background: #fff;
+  box-shadow: 1px 1px 5px $base-color;
+  transition: 0.4s ease-in-out all;
+
+  .dashboard,
+  .relatedInfo {
+    margin-bottom: 30px;
+    width: 100%;
+
+    h4 {
+      margin-bottom: 15px;
+    }
+    .selection {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        margin: 10px 0;
+        color: $base-color;
+
+        i {
+          margin-right: 10px;
+        }
+
+        &:hover {
+          color: $theme-color;
+        }
+      }
+    }
+  }
+
+  .aboutMe {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 75px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #eeeeee;
+    font-size: 15px;
+
+    span {
+      display: block;
+    }
+  }
+}

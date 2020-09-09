@@ -5,10 +5,13 @@ import { Intro } from "./Intro/Intro";
 import { Graph } from "./Graph/Graph";
 import { Status } from "./Status/Status";
 import { Table } from "./Table/Table";
+import "../styles/Dashboard/Dashboard.css";
 
 export const Main = ({ showSubNav, closeSubNav }) => {
   const [canadaData, setCanadaData] = useState({});
   const { Date } = canadaData;
+
+  console.log("XXXXXX:", Date);
 
   // GETTING CURRENT DATA
   const getCurrentData = async () => {

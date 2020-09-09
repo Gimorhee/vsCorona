@@ -17,11 +17,6 @@
   font-weight: 500;
 }
 
-.coronaInfo h3 {
-  color: #252525;
-  font-size: 20px;
-}
-
 .coronaInfo p {
   font-size: 20px;
 }
@@ -77,9 +72,6 @@
   }
   .coronaInfo h1 {
     font-size: 34px;
-  }
-  .coronaInfo h3 {
-    font-size: 18px;
   }
   .coronaInfo p {
     font-size: 17px;
@@ -158,10 +150,6 @@
   margin-bottom: 15px;
 }
 
-.relatedSites h3 {
-  font-size: 28px;
-}
-
 .relatedSites .sites {
   height: auto;
   background: #fff;
@@ -195,9 +183,6 @@
 @media only screen and (max-width: 767px) {
   .relatedSites h1 {
     font-size: 30px;
-  }
-  .relatedSites h3 {
-    font-size: 24px;
   }
   .relatedSites .sites ul {
     margin-top: 0px;

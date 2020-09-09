@@ -38,7 +38,7 @@ export const LiveNews = ({ showSubNav, closeSubNav }) => {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/U_sYIKWhJvk?autoplay=1"
+              src="https://www.youtube.com/embed/U_sYIKWhJvk"
               frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen=""

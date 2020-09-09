@@ -6,7 +6,6 @@ export const RelatedSites = ({ showSubNav, closeSubNav }) => {
       <div className={showSubNav ? "relatedSites" : "relatedSites noSubNav"}>
         <h1>COVID-19 Related Sites</h1>
         <div className="sites">
-          <h3>Related Sitemaps</h3>
           <ul>
             <li>
               World Health Organization -{" "}

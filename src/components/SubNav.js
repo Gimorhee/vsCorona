@@ -26,12 +26,12 @@ export const SubNav = ({ showSubNav }) => {
         <h4>CORANA INFO</h4>
         <div className="selection">
           <Link to="/corona">
-            <i className="fas fa-virus"></i>What is Corona19?
+            <i className="fas fa-virus"></i>What is COVID-19?
           </Link>
-          <Link to="#">
-            <i className="far fa-newspaper"></i>Live News
+          <Link to="/live-news">
+            <i className="far fa-newspaper"></i>COVID-19 News
           </Link>
-          <Link to="#">
+          <Link to="/related-sites">
             <i className="fas fa-th-large"></i>Related Sites
           </Link>
         </div>

@@ -3,6 +3,8 @@ import { Main } from "./components/Main";
 import { Korea } from "./components/Korea";
 import { World } from "./components/World";
 import { Corona } from "./components/Corona";
+import { LiveNews } from "./components/LiveNews";
+import { RelatedSites } from "./components/RelatedSites";
 import { Nav } from "./components/Nav";
 import { SubNav } from "./components/SubNav";
 
@@ -54,6 +56,26 @@ function App() {
             path="/corona"
             render={(props) => (
               <Corona
+                {...props}
+                showSubNav={subNav}
+                closeSubNav={closeSubNav}
+              />
+            )}
+          ></Route>
+          <Route
+            path="/live-news"
+            render={(props) => (
+              <LiveNews
+                {...props}
+                showSubNav={subNav}
+                closeSubNav={closeSubNav}
+              />
+            )}
+          ></Route>
+          <Route
+            path="/related-sites"
+            render={(props) => (
+              <RelatedSites
                 {...props}
                 showSubNav={subNav}
                 closeSubNav={closeSubNav}

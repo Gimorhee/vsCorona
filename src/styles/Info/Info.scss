@@ -64,51 +64,6 @@ $dark-color: #252525;
   }
 }
 
-@media only screen and (max-width: 1000px) {
-  .coronaInfo {
-    left: 0;
-    width: 100%;
-
-    h1 {
-      font-size: 34px;
-    }
-
-    p {
-      font-size: 17px;
-    }
-
-    .detail {
-      .symptomsContainer {
-        .symptoms {
-          .symptom {
-            width: 49%;
-
-            ul {
-              li {
-                font-size: 15px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .coronaInfo {
-    .detail {
-      .symptomsContainer {
-        .symptoms {
-          .symptom {
-            width: 100%;
-          }
-        }
-      }
-    }
-  }
-}
-
 .liveNews {
   height: auto;
   background: linear-gradient(to bottom, #0028ff, #fff);
@@ -136,24 +91,6 @@ $dark-color: #252525;
     .videoContainer {
       height: 500px;
     }
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  .liveNews {
-    left: 0;
-    width: 100%;
-
-    .news {
-      h1 {
-        font-size: 23px;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .liveNews {
   }
 }
 
@@ -196,6 +133,46 @@ $dark-color: #252525;
 }
 
 @media only screen and (max-width: 1000px) {
+  .coronaInfo {
+    left: 0;
+    width: 100%;
+
+    h1 {
+      font-size: 34px;
+    }
+
+    p {
+      font-size: 17px;
+    }
+
+    .detail {
+      .symptomsContainer {
+        .symptoms {
+          .symptom {
+            width: 49%;
+
+            ul {
+              li {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .liveNews {
+    left: 0;
+    width: 100%;
+
+    .news {
+      h1 {
+        font-size: 23px;
+      }
+    }
+  }
+
   .relatedSites {
     left: 0;
     width: 100%;
@@ -203,7 +180,25 @@ $dark-color: #252525;
 }
 
 @media only screen and (max-width: 767px) {
+  .liveNews {
+    padding: 30px 15px;
+  }
+
+  .coronaInfo {
+    padding: 30px 15px;
+    .detail {
+      .symptomsContainer {
+        .symptoms {
+          .symptom {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
   .relatedSites {
+    padding: 30px 15px;
     h1 {
       font-size: 30px;
     }

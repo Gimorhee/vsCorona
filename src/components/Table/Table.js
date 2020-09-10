@@ -116,7 +116,7 @@ export const Table = ({ country, title, number }) => {
             break;
 
           default:
-            console.log("etc province");
+            // console.log("etc province");
             break;
         }
       }

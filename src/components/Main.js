@@ -11,8 +11,6 @@ export const Main = ({ showSubNav, closeSubNav }) => {
   const [canadaData, setCanadaData] = useState({});
   const { Date } = canadaData;
 
-  console.log("XXXXXX:", Date);
-
   // GETTING CURRENT DATA
   const getCurrentData = async () => {
     const url = "https://api.covid19api.com/total/dayone/country/canada";

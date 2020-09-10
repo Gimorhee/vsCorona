@@ -10,7 +10,10 @@ export const Intro = ({ region, Date }) => {
         <p>vsCorona is built with 'CORONAVIRUS COVID19 API' - Postman</p>
         <span>
           Last Update:{" "}
-          <Moment format="YYYY-MM-DD" add={{ days: 1 }}>
+          <Moment
+            format="YYYY-MM-DD"
+            add={{ days: window.location.pathname === "/world" ? 0 : 1 }}
+          >
             {Date}
           </Moment>
         </span>

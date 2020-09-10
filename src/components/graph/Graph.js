@@ -117,7 +117,7 @@ export const Graph = ({ country, region, days }) => {
             break;
 
           default:
-            console.log("etc province");
+            // console.log("etc province");
             break;
         }
       }

@@ -72,7 +72,7 @@ export const Corona = ({ showSubNav, closeSubNav }) => {
           </div>
         </div>
         <div className="detail">
-          <h1>How to prevent COVID-19</h1>
+          <h1>How to prevent</h1>
           <p>
             Protect yourself and others around you by knowing the facts and
             taking appropriate precautions. Follow advice provided by your local
